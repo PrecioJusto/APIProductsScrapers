@@ -1,0 +1,14 @@
+{
+  "name": "scrapingcarrefour",
+  "version": "1.0.0",
+  "description": "The scrapping file for the carrefour info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tolo",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
+}
