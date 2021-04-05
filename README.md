@@ -1,2 +1,2 @@
 # APIProductsScrapers
-All the scrapers that send info to the Podructs API.
+All the scrapers that send info to the Products API.
