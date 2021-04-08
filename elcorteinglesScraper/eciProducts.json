@@ -1,0 +1,13 @@
+{
+    "bebidas": {
+        "refrescos": ["https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/refrescos-y-gaseosa/"],
+        "cervezas": ["https://www.elcorteingles.es/supermercado/bebidas/cervezas/"],
+        "aguas_y_zumos": [
+            "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/agua-y-soda/",
+            "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/zumos-y-nectares/"
+        ],
+        "alcoholes": ["https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/"],
+        "vinos": ["https://www.elcorteingles.es/supermercado/bebidas/vinos/"]
+    },
+    "alimentacion": {}
+}
