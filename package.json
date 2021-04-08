@@ -1,12 +1,12 @@
 {
-  "name": "scrapingcarrefour",
+  "name": "scraping",
   "version": "1.0.0",
-  "description": "The scrapping file for the carrefour info",
-  "main": "index.js",
+  "description": "The scrapping file different supermarkets info",
+  "main": "carrefour.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "tolo",
+  "author": "Daniel Carrillo, Samuel Romero, Tolo Castañer",
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^2.0.0"
