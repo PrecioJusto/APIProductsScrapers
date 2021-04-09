@@ -13,12 +13,14 @@ const urls = require('./eciProducts.json');
     const categories = Object.keys(urls);
     const page = await browser.newPage();
 
+    let isFirstTime = true;
     for (let category in urls) {
         const page = await browser.newPage();
         for (let subcategory in urls[category]) {
             for (let url of urls[category][subcategory]) {
                 await page.goto(url);
-                const products = await getProducts(page);
+                const products = await getProducts(page, isFirstTime);
+                isFirstTime = false;
                 console.log(products);
 
                 /*
@@ -38,41 +40,33 @@ const urls = require('./eciProducts.json');
     }
 })();
 
-async function getProducts(page) {
+async function getProducts(page, isFirstTime) {
+    await page.waitForTimeout(3000);
+    if (isFirstTime) {
+        await page.click('._pagination');
+    }
     await autoScroll(page);
-    /*
-    const listContainer = await page.$('.product-card-list__list');
-    const product = await listContainer.$$eval('li .product-card', listCard => {
-        return listCard.map(cardElement => {
-            // Replace de saltos de linea y trim de espacios vacios.
-            const trimRepleace = function (string) {
-                return string.replace(/(\r\n|\n|\r)/gm, '').trim();
-            };
-            let price = null;
 
-            const img = cardElement.querySelector('img').src;
-            const name = trimRepleace(cardElement.querySelector('.product-card__title a').innerHTML);
-            const pricesContainer = cardElement.querySelector('.product-card__prices');
-
-            if (pricesContainer.childElementCount > 1) {
-                price = trimRepleace(pricesContainer.querySelector('.product-card__price--current').innerHTML);
-            } else price = trimRepleace(pricesContainer.querySelector('.product-card__price').innerHTML);
+    const elements = await page.evaluate(() =>
+        [...document.querySelectorAll('.js-product')].map(elem => {
+            const name = JSON.parse(elem.dataset.json).name;
+            const brand = JSON.parse(elem.dataset.json).brand;
+            const price = JSON.parse(elem.dataset.json).price.final;
+            const img = elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src;
+            const pack = extractPack(name);
+            const container = extractContainer(name);
 
             return {
-                img: img,
                 name: name,
-                pack: 2,
-                envase: {
-                    capacidad: '',
-                    type: 'can'
-                },
+                brand: brand,
                 price: price,
-                super: 'carrefour'
+                pack: pack,
+                container: container,
+                img: img
             };
-        });
-    });
-    return product;
-    */
+        })
+    );
+    return elements;
 }
 
 async function autoScroll(page) {
@@ -88,7 +82,11 @@ async function autoScroll(page) {
                     clearInterval(timer);
                     resolve();
                 }
-            }, 200);
+            }, 5);
         });
     });
 }
+
+function extractPack(name) {}
+
+function extractContainer(name) {}
