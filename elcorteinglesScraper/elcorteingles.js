@@ -49,21 +49,34 @@ async function getProducts(page, isFirstTime) {
 
     const elements = await page.evaluate(() =>
         [...document.querySelectorAll('.js-product')].map(elem => {
-            const name = JSON.parse(elem.dataset.json).name;
-            const brand = JSON.parse(elem.dataset.json).brand;
-            const price = JSON.parse(elem.dataset.json).price.final;
-            const img = elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src;
-            const pack = extractPack(name);
-            const container = extractContainer(name);
+            if (elem.dataset.json.length > 1) {
+                const name = JSON.parse(elem.dataset.json).name;
+                const brand = JSON.parse(elem.dataset.json).brand;
+                const price = JSON.parse(elem.dataset.json).price.final;
+                const img = elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src;
+                const pack = extractPack(name);
+                const container = extractContainer(name);
 
-            return {
-                name: name,
-                brand: brand,
-                price: price,
-                pack: pack,
-                container: container,
-                img: img
-            };
+                return {
+                    name: name,
+                    brand: brand,
+                    price: price,
+                    pack: pack,
+                    container: container,
+                    img: img
+                };
+            }
+
+            function extractPack(name) {}
+
+            function extractContainer(name) {
+                const containers = ['botella', 'brik', 'garrafa', 'lata', 'bolsa', 'envase'];
+                const productContainer = containers.find(container => name.includes(container));
+                if (productContainer == undefined || 1 > productContainer.length) {
+                    return 'unknown';
+                }
+                return productContainer;
+            }
         })
     );
     return elements;
@@ -86,7 +99,3 @@ async function autoScroll(page) {
         });
     });
 }
-
-function extractPack(name) {}
-
-function extractContainer(name) {}
