@@ -209,7 +209,8 @@
             "https://www.carrefour.es/supermercado/la-despensa/aperitivos/patatas-fritas/cat20072/c"
         ],
         "snacks": [
-            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/snacks/cat20074/c"
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/snacks/cat20074/c",
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/tortitas/cat390007/c"
         ],
         "aceitunas_y_encurtidos": [
             "https://www.carrefour.es/supermercado/la-despensa/aperitivos/aceitunas-y-encurtidos/cat20067/c"
@@ -220,8 +221,8 @@
         "galletas_saladas": [
             "https://www.carrefour.es/supermercado/la-despensa/aperitivos/galletas-saladas/cat390002/c"
         ],
-        "tortitas": [
-            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/tortitas/cat390007/c"
-        ]
+        "frutos_deshidratados": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/frutas-desecadas/cat390004/c"
+        ],
     }
 }
