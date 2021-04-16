@@ -51,6 +51,7 @@ async function getProducts(page) {
 
     for (let actualPage = 1; actualPage <= totalPages - 1; actualPage++) {
         products.push(await getAllFromPage(page));
+        console.log(products);
         if (actualPage < totalPages - 1) {
             const pageUrl = `${originalUrl}?offset=${(actualPage - 1) * productsPerPage + productsPerPage * 2}`;
             await page.goto(pageUrl);
@@ -76,6 +77,7 @@ async function getAllFromPage(page) {
             const img = cardElement.querySelector('img').src;
             const name = trimRepleace(cardElement.querySelector('.product-card__title a').innerHTML);
             const pricesContainer = cardElement.querySelector('.product-card__prices');
+            const stock = cardElement.querySelector('.add-to-cart-button').innerText.includes('Añadir');
 
             if (offer_type != null) offer_type = offer_type.innerHTML;
 
@@ -92,6 +94,7 @@ async function getAllFromPage(page) {
                 price: price,
                 offer_price: offer_price,
                 offer_type: offer_type,
+                stock: stock,
                 supermarket: 'carrefour'
             };
         });
@@ -99,6 +102,7 @@ async function getAllFromPage(page) {
     return product;
 }
 
+// The distance and the interval can be changed for faster data, but less consistency
 async function autoScroll(page) {
     await page.evaluate(async () => {
         await new Promise((resolve, reject) => {
