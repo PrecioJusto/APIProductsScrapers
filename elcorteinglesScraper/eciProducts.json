@@ -265,14 +265,77 @@
       ]
    },
    "charcuteria": {
-      "foie_pates_y_sobrasadas": [],
-      "jamon_cocido_y_lacon": [],
-      "jamon_serrano_e_iberico": [],
-      "salchichon_salami_y_fuet": [],
-      "mortadela_y_choped": [],
-      "bacon_y_panceta": [],
-      "salchichas": [],
-      "chorizo_lomo_y_otros": [] // + cecina, chistorra y longaniza
+      "foie_pates_y_sobrasadas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/foies-y-pates/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/sobrasada-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/sobrasada-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/sobrasada-al-corte/"
+      ],
+      "jamon_cocido_y_lacon": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/jamon-cocido-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambre-de-pavo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambre-de-pollo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambres-envasados-diversos/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/lomo-cocido-y-asado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/paleta-cocida-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/jamon-cocido-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/fiambre-de-pavo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/fiambre-de-pollo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/paleta-cocida-y-lacon-al-corte/"
+      ],
+      "jamon_serrano_iberico_y_paletas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/jamon-y-paleta-curada-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/jamon-de-pato-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/jamon-y-paleta-iberica-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/embutidos-ibericos-diversos-envasados/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/joselito-y-5-jotas/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/jamones-y-paletas-curadas/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/joselito-y-5-jotas/"
+      ],
+      "salchichon_salami_y_fuet": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/salchichon-y-longaniza-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/fuet-y-espetec-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/salami-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/salchichon-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/salchichon-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/fuet-y-espetec/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/salami-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/salchichon-iberico-al-corte/"
+      ],
+      "mortadela_y_choped": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/chopped-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/mortadela-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/mortadela-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/chopped-al-corte/"
+      ],
+      "bacon_y_panceta": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/bacon-y-panceta-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/bacon-y-panceta-al-corte/"
+      ],
+      "salchichas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/salchichas/"
+      ],
+      "chorizo_lomo_y_otros": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/chorizo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/lomo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/embutidos-diversos-envasados/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/cecina-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/chorizo-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/lomo-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/embutidos-frescos/chorizo-fresco-y-chistorra/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/embutidos-frescos/morcilla/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/cabeza-de-cerdo-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/chorizo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/chorizo-casero-y-regional/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/lomo-de-cerdo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/cecina-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-frescos/chorizo-fresco-y-chistorra/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/chorizo-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/lomo-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/morcon-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/longaniza-iberica-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/chicharrones-y-cabeza-de-cerdo/"
+      ]
    },
    "quesos": {
       "curados": [
@@ -314,10 +377,6 @@
       ],
       "denominacion_de_origen": [
          "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-denominacion-de-origen/"
-      ],
-      "nacionales": [
-         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-nacional-envasado/",
-         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-nacionales/"
       ],
       "internacionales": []
    },
