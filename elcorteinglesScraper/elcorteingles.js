@@ -12,7 +12,7 @@ const urls = require('./eciProducts.json');
 
         const page = await browser.newPage();
         for (let subcategory in urls[category]) {
-            const products = [];
+            const dirtyProducts = [];
             let actualPage;
             let lastPage;
             let isFirstTime;
@@ -35,10 +35,13 @@ const urls = require('./eciProducts.json');
                         isFirstTime = false;
                     }
 
-                    products.push(await getProducts(page));
+                    dirtyProducts.push(await getProducts(page));
+                    await getProducts(page);
                     actualPage++;
                 }
             }
+
+            const cleanProducts = dirtyProducts.flat(1);
 
             const dir = `./data/products/eci/${category}/`;
             if (!fs.existsSync(dir)) {
@@ -46,7 +49,7 @@ const urls = require('./eciProducts.json');
                     recursive: true
                 });
             }
-            fs.writeFile(`./data/products/eci/${category}/${subcategory}.json`, JSON.stringify(products), err => {
+            fs.writeFile(`./data/products/eci/${category}/${subcategory}.json`, JSON.stringify(cleanProducts), err => {
                 if (err) throw err;
             });
         }
@@ -56,8 +59,6 @@ const urls = require('./eciProducts.json');
 })();
 
 async function getProducts(page) {
-    //await autoScroll(page);
-
     const elements = await page.evaluate(() =>
         [...document.querySelectorAll('.js-product')].map(elem => {
             if (elem.dataset.json.length > 1) {
@@ -67,28 +68,14 @@ async function getProducts(page) {
                 const img = changeImgSrc(
                     elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src
                 );
-                const pack = extractPack(name);
-                const container = extractContainer(name);
 
                 return {
                     name: name,
                     brand: brand,
                     price: price,
-                    pack: pack,
-                    container: container,
-                    img: img
+                    img: img,
+                    supermarket: 'elcorteingles'
                 };
-            }
-
-            function extractPack(name) {}
-
-            function extractContainer(name) {
-                const containers = ['botella', 'brik', 'garrafa', 'lata', 'bolsa', 'envase'];
-                const productContainer = containers.find(container => name.includes(container));
-                if (productContainer == undefined || 1 > productContainer.length) {
-                    return 'unknown';
-                }
-                return productContainer;
             }
 
             function changeImgSrc(img) {
