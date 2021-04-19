@@ -17,13 +17,13 @@ const alcampoUrls = require('./alcampo_urls.json');
                 products.push(await getEachProductFromPage(page));
             }
             
-            const dir = `./data/${category}/`;
+            const dir = `./data/products/alcampo/${category}/`;
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir, {
                     recursive: true
                 });
             }
-            fs.writeFile(`./data/${category}/${subCategory}.json`, JSON.stringify(products.flat(2)), err => {
+            fs.writeFile(`./data/products/alcampo/${category}/${subCategory}.json`, JSON.stringify(products.flat(2)), err => {
                 if (err) throw err;
             });
         }
