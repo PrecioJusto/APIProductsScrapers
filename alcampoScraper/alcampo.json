@@ -1,0 +1,344 @@
+{
+    "bebidas": {
+        "refrescos": [
+            "https://www.alcampo.es/compra-online/bebidas/bebidas-refrescantes/c/W1103",
+            "https://www.alcampo.es/compra-online/bebidas/agua-soda-y-gaseosas/gaseosa-y-soda/c/wgaseosaysoda"
+        ],
+        "cervezas": ["https://www.alcampo.es/compra-online/bebidas/cervezas/c/W1107"],
+        "aguas_y_zumos": [
+            "https://www.alcampo.es/compra-online/bebidas/agua-soda-y-gaseosas/aguas-sin-gas/c/W1101041",
+            "https://www.alcampo.es/compra-online/bebidas/agua-soda-y-gaseosas/aguas-con-gas/c/W1101042",
+            "https://www.alcampo.es/compra-online/bebidas/agua-soda-y-gaseosas/aguas-sabores/c/W1101043",
+            "https://www.alcampo.es/compra-online/bebidas/zumos-de-frutas/c/W1102"
+        ],
+        "alcoholes": [
+            "https://www.alcampo.es/compra-online/bebidas/bebidas-alcoholicas/c/W1154",
+            "https://www.alcampo.es/compra-online/bebidas/licores/vermouth/c/W11554"
+        ],
+        "vinos": [
+            "https://www.alcampo.es/compra-online/bebidas/vino-tinto/c/W1151",
+            "https://www.alcampo.es/compra-online/bebidas/vino-blanco/c/W1152",
+            "https://www.alcampo.es/compra-online/bebidas/vino-rosados-frizzantes-dulces-y-olorosos/c/W1153"
+        ],
+        "cava_champagne_y_sidra": [
+            "https://www.alcampo.es/compra-online/bebidas/champagne-cavas-y-sidras/cavas-y-estuches/c/W11561",
+            "https://www.alcampo.es/compra-online/bebidas/champagne-cavas-y-sidras/champagne/c/W11562",
+            "https://www.alcampo.es/compra-online/bebidas/champagne-cavas-y-sidras/sidras/c/W11563"
+        ],
+        "licores_y_cremas": [
+            "https://www.alcampo.es/compra-online/bebidas/licores/licor-de-frutas/c/W11551",
+            "https://www.alcampo.es/compra-online/bebidas/licores/aguardientes-licores-y-orujos/c/W11558",
+            "https://www.alcampo.es/compra-online/bebidas/licores/cremas/c/W11553",
+            "https://www.alcampo.es/compra-online/bebidas/licores/pacharan/c/W11552",
+            "https://www.alcampo.es/compra-online/bebidas/licores/anis/c/W11555"
+        ]
+    },
+    "alimentacion": {
+        "aceite_y_vinagre": [
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/aceites/c/W2301",
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/vinagres-y-aderezos/c/W1001"
+        ],
+        "salsa_y_tomatefrito": [
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/tomate-frito/c/WSalsaTomate",
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/mayonesa-y-salsas-ligeras/c/WMayonesa",
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/otras-salsas/c/W1002"
+        ],
+        "cafes": [
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW100806009",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW1008061",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW1008064",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW1008062",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW1008063",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW100806010"
+        ],
+        "cacao": [
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cafessucedaneos-y-derivados-del-cacao/c/W100806?q=%3Arelevance%3AcategoryChild%3AW100808",
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/chocolates-cremas-untar-y-bombones/c/W1008"
+        ],
+        "galletas": ["https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/galletas/c/W100805"],
+        "cereales": ["https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/cereales/c/W100804"],
+        "tes_e_infusiones": [
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/te-e-infusiones/c/W100807"
+        ],
+        "conservas": [
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/conservas-de-pescado/c/W100402",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/conservas-vegetales/c/W100401",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/tomates-triturados-y-otros/c/W100401008",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/patesfoie-gras-untables/c/W100403",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/conservas-de-pollo-magro-y-salchichas/c/W100406",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/frutas-en-conserva-y-almibares/c/W100405"
+        ],
+        "huevos": ["https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/huevos/c/W1608"],
+        "pasta": [
+            "https://www.alcampo.es/compra-online/alimentacion/caldos-pasta-arroz-legumbres-pure/pasta/c/W100501"
+        ],
+        "arroz_y_cous_cous": [
+            "https://www.alcampo.es/compra-online/alimentacion/caldos-pasta-arroz-legumbres-pure/arroz/c/W100502",
+            "https://www.alcampo.es/compra-online/alimentacion/caldos-pasta-arroz-legumbres-pure/couscous-semolas-y-maiz/c/W100506"
+        ],
+        "legumbres": [
+            "https://www.alcampo.es/compra-online/alimentacion/caldos-pasta-arroz-legumbres-pure/legumbres/c/W2112208"
+        ],
+        "harina_y_masas": [
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/harinas-y-masas/c/w100605012"
+        ],
+        "azucar_y_edulcorantes": [
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/azucar-y-edulcorantes/c/WAzucarEdulcorantes"
+        ],
+        "sal_y_bicarbonatos": [
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/sal-y-bicarbonato/c/W100111"
+        ],
+        "panadería": [
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AWPanMolde",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW101004",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW101005",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AWPanRalladoPrecocinado",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW101014",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW1010",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW101011",
+            "https://www.alcampo.es/compra-online/alimentacion/azucar-harina-masas-y-pan/c/W1009?q=%3Arelevance%3AcategoryChild%3AW101015",
+            "https://www.alcampo.es/compra-online/frescos/panaderia/barras-chapatas-y-baguettes/c/W12811",
+            "https://www.alcampo.es/compra-online/frescos/panaderia/panes-y-hogazas/c/W12813",
+            "https://www.alcampo.es/compra-online/frescos/panaderia/pan-integral-y-sin-sal/c/W12814",
+            "https://www.alcampo.es/compra-online/frescos/panaderia/pan-con-cereales/c/W12810",
+            "https://www.alcampo.es/compra-online/frescos/panaderia/pan-cortado-y-de-molde/c/W12815"
+        ],
+        "pasteleria_reposteria_y_bolleria": [
+            "https://www.alcampo.es/compra-online/alimentacion/desayuno-y-merienda/bolleria-y-pasteleria/c/W1011",
+            "https://www.alcampo.es/compra-online/frescos/pasteleria/c/W1282"
+        ],
+        "especias_y_sazonadores": [
+            "https://www.alcampo.es/compra-online/alimentacion/aceite-vinagre-salsas-especias/especias-y-sazonadores/c/W100201"
+        ]
+    },
+    "lacteos": {
+        "leche": ["https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/leche/c/W1603"],
+        "bebidas_vegetales": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/bebidas-vegetales/c/W1609"
+        ],
+        "batidos_y_horchatas": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/batidos-horchatas-y-cafes-preparados/c/W1604?q=%3Arelevance%3AcategoryChild%3AWBatidos",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/batidos-horchatas-y-cafes-preparados/c/W1604?q=%3Arelevance%3AcategoryChild%3AW160404"
+        ],
+        "cafes_y_chocolates_preparados": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/batidos-horchatas-y-cafes-preparados/c/W1604?q=%3Arelevance%3AcategoryChild%3AW160406"
+        ],
+        "mantequilla_margarina_y_nata": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/c/W16?q=%3Arelevance%3AcategoryChild%3AWMantequillaMargarina"
+        ],
+        "leche_condensada_evaporada_polvo": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/c/W16?q=%3Arelevance%3AcategoryChild%3AW160316"
+        ],
+        "yogures_y_postres": [
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3AW160109",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3AW160215",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3Aw160214",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3Aw160213",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3Aw160212",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3Aw160211",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3Aw160210",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3AW160202",
+            "https://www.alcampo.es/compra-online/alimentacion/leche-huevos-yogures-y-lacteos/postres-lacteos/c/W1602?q=%3Arelevance%3AcategoryChild%3AW160201"
+        ]
+    },
+    "congelados": {
+        "helados": ["https://www.alcampo.es/compra-online/frio-y-congelados/helados/c/W200220184"],
+        "pescado_y_marisco": [
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AW120102",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AW120105",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AW120505",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AW120506",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AW120104",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/pescados-mariscos-y-surimis/c/W1201?q=%3Arelevance%3AcategoryChild%3AWCongeladoGulas"
+        ],
+        "pizzas_sushi_y_platos_preparados": [
+            "https://www.alcampo.es/compra-online/frio-y-congelados/platos-preparados-del-mundo/c/W200220181",
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/platos-preparados/c/W1205"
+        ],
+        "verduras_y_hortalizas_congeladas": [
+            "https://www.alcampo.es/compra-online/frio-y-congelados/congelados/verduras/c/W1203"
+        ]
+    },
+    "carniceria": {
+        "aves_y_pollo": [
+            "https://www.alcampo.es/compra-online/frescos/carne/pollo/c/W1301",
+            "https://www.alcampo.es/compra-online/frescos/carne/pavo/c/W130103",
+            "https://www.alcampo.es/compra-online/frescos/carne/otras-aves/c/W130110"
+        ],
+        "cerdo": ["https://www.alcampo.es/compra-online/frescos/carne/cerdo/c/W1302"],
+        "conejo": ["https://www.alcampo.es/compra-online/frescos/carne/c/W13?q=%3Arelevance%3AcategoryChild%3AW1305"],
+        "cordero": ["https://www.alcampo.es/compra-online/frescos/carne/c/W13?q=%3Arelevance%3AcategoryChild%3AW1303"],
+        "vacuno": ["https://www.alcampo.es/compra-online/frescos/carne/c/W13?q=%3Arelevance%3AcategoryChild%3AW1304"],
+        "hamburguesas_y_carne_picada": [
+            "https://www.alcampo.es/compra-online/frescos/carne/c/W13?q=%3Arelevance%3AcategoryChild%3AW1827"
+        ]
+    },
+    "charcuteria": {
+        "foie_pates_y_sobrasadas": [
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/patesfoie-gras-untables/c/W100403?q=%3Arelevance%3AcategoryChild%3AW100403003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/foie-gras-pates-y-sobrasadas/c/W1504?q=%3Arelevance%3AcategoryChild%3AW150404",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/foie-gras-pates-y-sobrasadas/c/W1504?q=%3Arelevance%3AcategoryChild%3AW150403",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/patesfoie-gras-untables/c/W100403?q=%3Arelevance%3AcategoryChild%3AW100403002",
+            "https://www.alcampo.es/compra-online/alimentacion/conservas/patesfoie-gras-untables/c/W100403?q=%3Arelevance%3AcategoryChild%3AW100403002",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/foie-gras-pates-y-sobrasadas/c/W1504?q=%3Arelevance%3AcategoryChild%3AW150402",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/foie-gras-pates-y-sobrasadas/c/W1504?q=%3Arelevance%3AcategoryChild%3AW150401",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/foie-gras-pates-y-sobrasadas/c/W1504?q=%3Arelevance%3AcategoryChild%3AW150405"
+        ],
+        "jamon_cocido_y_lacon": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/fresca-al-corte/c/W1781?q=%3Arelevance%3AcategoryChild%3AW17812",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/fresca-al-corte/c/W1781?q=%3Arelevance%3AcategoryChild%3AW17814",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW153006",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW152006",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-taquitos/c/W154002?q=%3Arelevance%3AcategoryChild%3AW15400203"
+        ],
+        "jamon_serrano_iberico_y_paletas": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/fresca-al-corte/c/W1781?q=%3Arelevance%3AcategoryChild%3AW17811",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300101%3AcategoryChild%3AW153001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300102%3AcategoryChild%3AW153001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300104%3AcategoryChild%3AW153001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300103%3AcategoryChild%3AW153001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/jamones-y-paletas/c/W151001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-taquitos/c/W154002?q=%3Arelevance%3AcategoryChild%3AW15400201"
+        ],
+        "salchichon_salami_y_fuet": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300301%3AcategoryChild%3AW153003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300302%3AcategoryChild%3AW153003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300303%3AcategoryChild%3AW153003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200307%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200305%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200302%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200306%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200301%3AcategoryChild%3AW152003"
+        ],
+        "mortadela_y_choped": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW153008",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW152008"
+        ],
+        "bacon_y_panceta": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW153005",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200901%3AcategoryChild%3AW152009",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-taquitos/c/W154002?q=%3Arelevance%3AcategoryChild%3AW15400202"
+        ],
+        "salchichas": ["https://www.alcampo.es/compra-online/frescos/charcuteria/salchichas/c/W1503"],
+        "chorizo_lomo_y_otros": [
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW153002",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300203%3AcategoryChild%3AW153001",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW15300303%3AcategoryChild%3AW153003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-lonchas/c/W1530?q=%3Arelevance%3AcategoryChild%3AW153004",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW151002",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200303%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW15200304%3AcategoryChild%3AW152003",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW1520014",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-piezas/c/W1520?q=%3Arelevance%3AcategoryChild%3AW152005",
+            "https://www.alcampo.es/compra-online/frescos/charcuteria/charcuteria-en-taquitos/c/W154002?q=%3Arelevance%3AcategoryChild%3AW15400204"
+        ]
+    },
+    "quesos": {
+        "curados": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350102%3AcategoryChild%3AW3501",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350401010%3AcategoryChild%3AW350401%3AcategoryChild%3AW3504"
+        ],
+        "semicurados": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350103%3AcategoryChild%3AW3501",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350401009%3AcategoryChild%3AW350401%3AcategoryChild%3AW3504"
+        ],
+        "queso_fresco": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW3503"
+        ],
+        "tierno": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350105%3AcategoryChild%3AW3501",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350401008%3AcategoryChild%3AW350401%3AcategoryChild%3AW3504"
+        ],
+        "queso_rallado": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW3505"
+        ],
+        "brie_y_camembert": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350202001%3AcategoryChild%3AW350202%3AcategoryChild%3AW3502",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350202002%3AcategoryChild%3AW350202%3AcategoryChild%3AW3502"
+        ],
+        "azul_y_roquefort": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350201001%3AcategoryChild%3AW350201%3AcategoryChild%3AW3502",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350201003%3AcategoryChild%3AW350201%3AcategoryChild%3AW3502"
+        ],
+        "gouda_y_emmental": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/queso-en-lonchas/c/W3504?q=%3Arelevance%3AcategoryChild%3AW350401003%3AcategoryChild%3AW350401",
+            "https://www.alcampo.es/compra-online/frescos/quesos/queso-en-lonchas/c/W3504?q=%3Arelevance%3AcategoryChild%3AW350401005%3AcategoryChild%3AW350401"
+        ],
+        "crema_de_queso": [
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350603%3AcategoryChild%3AW3506",
+            "https://www.alcampo.es/compra-online/frescos/quesos/c/WQuesos?q=%3Arelevance%3AcategoryChild%3AW350604%3AcategoryChild%3AW3506"
+        ],
+        "denominacion_de_origen": [],
+        "internacionales": []
+    },
+    "pescaderia": {
+        "pescado": ["https://www.alcampo.es/compra-online/frescos/pescados-mariscos-y-moluscos/pescado/c/W1401"],
+        "marisco": ["https://www.alcampo.es/compra-online/frescos/pescados-mariscos-y-moluscos/marisco/c/W1402"],
+        "bacalao_y_salazones": [
+            "https://www.alcampo.es/compra-online/frescos/pescados-mariscos-y-moluscos/bacalao-y-salazones/c/W1407"
+        ],
+        "pulpo_calamar_y_sepia": [
+            "https://www.alcampo.es/compra-online/frescos/pescados-mariscos-y-moluscos/pulpo-calamar-y-sepia/c/W1846"
+        ]
+    },
+    "frutas": {
+        "fruta_de_temporada": ["https://www.alcampo.es/compra-online/frescos/frutas/frutas-de-temporada/c/W170105"],
+        "naranjas_y_otros_citricos": ["https://www.alcampo.es/compra-online/frescos/frutas/citricos/c/W170101"],
+        "manzanas_y_peras": [
+            "https://www.alcampo.es/compra-online/frescos/frutas/c/W1701?q=%3Arelevance%3AcategoryChild%3AW170102001"
+        ],
+        "sandias_y_melones": [
+            "https://www.alcampo.es/compra-online/frescos/frutas/c/W1701?q=%3Arelevance%3AcategoryChild%3AW170110"
+        ],
+        "tropicales_y_exoticas": [
+            "https://www.alcampo.es/compra-online/frescos/frutas/c/W1701?q=%3Arelevance%3AcategoryChild%3AW170106"
+        ],
+        "platanos_y_bananas": [
+            "https://www.alcampo.es/compra-online/frescos/frutas/c/W1701?q=%3Arelevance%3AcategoryChild%3AW170104"
+        ]
+    },
+    "verduras_y_hortalizas": {
+        "ensaladas_y_verduras": [
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/ensaladas-y-verduras-preparadas/c/W170209"
+        ],
+        "tomates_pepinos_y_pimientos": [
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/tomates-pepinos-y-pimientos/c/W170207"
+        ],
+        "champinones_y_setas": [
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/champinones-y-setas/c/W170204"
+        ],
+        "patatas_cebollas_y_ajos": [
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/patatas-ajos-y-cebollas/c/WPatataAjoCebolla"
+        ],
+        "hortalizas": [
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/c/W1702?q=%3Arelevance%3AcategoryChild%3AWLechugasColRepollo",
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/c/W1702?q=%3Arelevance%3AcategoryChild%3AWJudiasEsparragos",
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/c/W1702?q=%3Arelevance%3AcategoryChild%3AW170208009",
+            "https://www.alcampo.es/compra-online/frescos/verduras-y-hortalizas/c/W1702?q=%3Arelevance%3AcategoryChild%3AWCalabazasBerenjenas"
+        ]
+    },
+    "aperitivos_y_snacks": {
+        "frutos_secos": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/frutos-secos/c/W100302"
+        ],
+        "patatas_fritas": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/patatas-fritas/c/W100304"
+        ],
+        "snacks": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/snacks/c/W100306",
+            "https://www.alcampo.es/compra-online/alimentacion/alimentos-especiales-/c/W33?q=%3Arelevance%3AcategoryChild%3AW101203"
+        ],
+        "aceitunas_y:encurtidos": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/aceitunas-y-encurtidos/c/W100301"
+        ],
+        "palomitas": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/palomitas/c/W100303"
+        ],
+        "galletas_saladas": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/galletas-saladas/c/W100305"
+        ],
+        "frutos_deshidratados": [
+            "https://www.alcampo.es/compra-online/alimentacion/aperitivos-aceitunas-y-frutos-secos/frutos-deshidratados/c/WFrutosDeshidratados"
+        ]
+    }
+}
