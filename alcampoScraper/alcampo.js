@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer-extra');
 const fs = require('fs');
-const alcampoUrls = require('./alcampo.json');
+const alcampoUrls = require('./alcampo_urls.json');
 
 (async () => {
 
