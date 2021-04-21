@@ -7,7 +7,7 @@ const urls = require('./eciProducts.json');
 (async () => {
     for (let category in urls) {
         const browser = await puppeteer.launch({
-            headless: false
+            headless: true
         });
 
         const page = await browser.newPage();
@@ -64,7 +64,26 @@ async function getProducts(page) {
             if (elem.dataset.json.length > 1) {
                 const name = JSON.parse(elem.dataset.json).name;
                 const brand = JSON.parse(elem.dataset.json).brand;
-                const price = JSON.parse(elem.dataset.json).price.final;
+                const price =
+                    JSON.parse(elem.dataset.json).discount == true
+                        ? JSON.parse(elem.dataset.json).price.original
+                        : JSON.parse(elem.dataset.json).price.final;
+                const offer_price =
+                    JSON.parse(elem.dataset.json).discount == true ? JSON.parse(elem.dataset.json).price.final : 0;
+                const offer_type =
+                    elem.querySelector(
+                        '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
+                    ) != null
+                        ? elem.querySelector(
+                              '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
+                          ).innerText
+                        : false;
+                const stock =
+                    elem.querySelector(
+                        '.product_tile-right_container .product_tile-footer_controls .product_controls-button_container ._nostock'
+                    ) != null
+                        ? false
+                        : true;
                 const img = changeImgSrc(
                     elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src
                 );
@@ -74,6 +93,9 @@ async function getProducts(page) {
                     brand: brand,
                     price: price,
                     img: img,
+                    offer_price: offer_price,
+                    offer_type: offer_type,
+                    stock: true,
                     supermarket: 'elcorteingles'
                 };
             }

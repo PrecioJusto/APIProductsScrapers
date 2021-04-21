@@ -377,8 +377,7 @@
       ],
       "denominacion_de_origen": [
          "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-denominacion-de-origen/"
-      ],
-      "internacionales": []
+      ]
    },
    "frutas": {
       "fruta_de_temporada": [
@@ -448,7 +447,7 @@
       "snacks": [
          "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/aperitivos-diversos-y-snacks/"
       ],
-      "aceitunas_y:encurtidos": [
+      "aceitunas_y_encurtidos": [
          "https://www.elcorteingles.es/supermercado/alimentacion-general/aceitunas-y-encurtidos/"
       ],
       "palomitas": [
