@@ -29,6 +29,7 @@ const alcampoUrls = require('./alcampo_urls.json');
         }
         await page.close();
     }
+    await browser.close();
 })();
 
 async function getEachProductFromPage(page) {
@@ -43,7 +44,7 @@ async function getEachProductFromPage(page) {
     while(totalProducts != 0) {
         products.push(await getAllFromPage(page));
         const pageUrl = `${originalUrl}?page=${currentPage}`;
-        console.log(pageUrl);
+        //console.log(pageUrl);
         await page.goto(pageUrl);
         const actualTotalProducts = await page.$eval('.totalResults', el => el.innerText);
 
@@ -64,13 +65,21 @@ async function getAllFromPage(page) {
             const imageProduct = cardElement.querySelector("h2 > a > .cut-alt-img > img").src;
             const price = cardElement.querySelector(".price").innerText.split("\n")[0];
             const marca = cardElement.querySelector(".marca span").innerText;
+            let offer = null;
+            let stock = true;
+            const buttonStock = cardElement.querySelector('button[class*="out-of-stock"]');
+            const divOffer = cardElement.querySelector("div.secondary_card > div.promo_card");
+
+            if (divOffer) offer = "unknown";
+            if (buttonStock) stock = false;
+
             return {
                 img: imageProduct,
                 name: nameProduct,
                 price: price,
                 offer_price: 0,
-                offer_type: null,
-                stock: false,
+                offer_type: offer,
+                stock: stock,
                 super: 'alcampo'
             };
         });
