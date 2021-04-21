@@ -18,18 +18,19 @@ puppeteer.use(StealthPlugin());
                 await page.goto(url);
                 products.push(await getProducts(page));
             }
-            const dir = `../data/products/carrefour/${category}/`;
+            const dir = `./data/products/carrefour/${category}/`;
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir, {
                     recursive: true
                 });
             }
-            fs.writeFile(`../data/products/carrefour/${category}/${subcategory}.json`, JSON.stringify(products), err => {
+            fs.writeFile(`./data/products/carrefour/${category}/${subcategory}.json`, JSON.stringify(products.flat(2)), err => {
                 if (err) throw err;
             });
         }
         await page.close();
     }
+    await browser.close();
 })();
 
 async function getProducts(page) {
@@ -47,11 +48,8 @@ async function getProducts(page) {
     let productsPerPage = vars[1] - (vars[0] - 1);
     let products = [];
 
-    if (totalPages == 1) return await getAllFromPage(page);
-
-    for (let actualPage = 1; actualPage <= totalPages - 1; actualPage++) {
+    for (let actualPage = 1; actualPage <= totalPages; actualPage++) {
         products.push(await getAllFromPage(page));
-        console.log(products);
         if (actualPage < totalPages - 1) {
             const pageUrl = `${originalUrl}?offset=${(actualPage - 1) * productsPerPage + productsPerPage * 2}`;
             await page.goto(pageUrl);
@@ -62,7 +60,6 @@ async function getProducts(page) {
 
 async function getAllFromPage(page) {
     await autoScroll(page);
-
     const listContainer = await page.$('.product-card-list__list');
     const product = await listContainer.$$eval('li .product-card', listCard => {
         return listCard.map(cardElement => {
@@ -116,7 +113,7 @@ async function autoScroll(page) {
                     clearInterval(timer);
                     resolve();
                 }
-            }, 100);
+            }, 70);
         });
     });
 }
