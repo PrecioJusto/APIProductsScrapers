@@ -1,0 +1,228 @@
+{
+    "bebidas": {
+        "refrescos": [
+            "https://www.carrefour.es/supermercado/bebidas/refrescos/cat650001/c"
+        ],
+        "cervezas": [
+            "https://www.carrefour.es/supermercado/bebidas/cerveza/cat20023/c"
+        ],
+        "aguas_y_zumos": [
+            "https://www.carrefour.es/supermercado/bebidas/aguas-y-zumos/cat650002/c"
+        ],
+        "alcoholes": [
+            "https://www.carrefour.es/supermercado/bebidas/alcoholes/cat20022/c"
+        ],
+        "vinos": [
+            "https://www.carrefour.es/supermercado/bebidas/vinos/cat20027/c"
+        ],
+        "cava_champagne_y_sidra": [
+            "https://www.carrefour.es/supermercado/bebidas/cava-y-champagne/cat20024/c",
+            "https://www.carrefour.es/supermercado/bebidas/sidra/cat20026/c"
+        ],
+        "licores_y_cremas": [
+            "https://www.carrefour.es/supermercado/bebidas/licores-y-cremas/cat20025/c"
+        ]
+    },
+    "alimentos": {
+        "aceite_y_vinagre": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/aceites-y-vinagres/cat20066/c"
+        ],
+        "salsa_y_tomatefrito": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/salsas-y-tomate-frito/cat20076/c"
+        ],
+        "cafes": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/cafes/cat20100/c"
+        ],
+        "cacao": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/cremas-de-cacao-avellana-y-cacahuete/cat20082/c",
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/chocolates-turrones-y-bombones/cat20081/c",
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/cacaos-y-cereales-solubles/cat20079/c"
+        ],
+        "galletas": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/galletas/cat20084/c"
+        ],
+        "cereales": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/cereales-y-barritas/cat20080/c"
+        ],
+        "tes_e_infusiones": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/infusiones-y-tes/cat20105/c"
+        ],
+        "conservas": [
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/conservas-de-carne/cat20109/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/conservas-de-frutas/cat20110/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/conservas-de-tomate/cat20112/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/conservas-de-vegetales/cat20113/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/gazpacho-y-salmorejo/cat500001/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/conservas-de-pescado-y-marisco/cat20111/c"
+        ],
+        "huevos": [
+            "https://www.carrefour.es/supermercado/la-despensa/huevos/cat20021/c"
+        ],
+        "pasta": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/pastas/cat20073/c"
+        ],
+        "arroz_y_cous_cous": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/arroz-y-cous-cous/cat20068/c"
+        ],
+        "legumbres": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/legumbres/cat20071/c"
+        ],
+        "harina_y_masas": [
+            "https://www.carrefour.es/supermercado/la-despensa/alimentacion/harinas-y-levaduras/cat20070/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/masa-fresca-y-bases/cat20162/c"
+        ],
+        "azucar": [
+            "https://www.carrefour.es/supermercado/la-despensa/dulce-y-desayuno/azucar-y-edulcorantes/cat20078/c"
+        ],
+        "panadería": [
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/panaderia-tradicional/cat170025/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/pan-de-molde-tostado-y-picos/cat20163/c"
+        ],
+        "pasteleria_reposteria_y_bolleria": [
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/bolleria-tradicional/cat170026/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/pasteleria-y-reposteria/cat20164/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/panaderia-bolleria-y-pasteleria/magdalenas-dulces-y-bollos/cat20161/c"
+        ]
+    },
+    "lacteos": {
+        "leche": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/leche/cat20093/c"
+        ],
+        "bebidas_vegetales": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/bebida-vegetal/cat20090/c"
+        ],
+        "batidos_y_horchatas": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/batidos-y-horchatas/cat20089/c"
+        ],
+        "cafes_y_chocolates_preparados": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/listo-para-beber/cat410003/c"
+        ],
+        "mantequilla_margarina_y_nata": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/nata/cat20096/c",
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/mantequillas-y-margarinas/cat20095/c",
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/bechamel/cat20091/c"
+        ],
+        "leche_condensada_evaporada_polvo": [
+            "https://www.carrefour.es/supermercado/la-despensa/lacteos/leche-condensada-evaporada-y-en-polvo/cat20094/c"
+        ],
+        "yogures_y_postres": [
+            "https://www.carrefour.es/supermercado/la-despensa/yogures-y-postres/cat390008/c"
+        ]
+    },
+    "congelados": {
+        "helados": [
+            "https://www.carrefour.es/supermercado/la-despensa/helados/cat460001/c"
+        ],
+        "pescado_y_marisco": [
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/pulpo-calamar-y-sepia/cat20127/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/pescado-y-marisco-congelado/cat210007/c"
+        ],
+        "pizzas_sushi_y_platos_preparados": [
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/pizzas/cat20115/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/platos-preparados/cat20116/c",
+            "https://www.carrefour.es/supermercado/productos-frescos/la-cocina-de-carrefour/cat20016/c",
+            "https://www.carrefour.es/supermercado/la-despensa/conservas-sopas-y-precocinados/tortillas-empanadillas-y-sandwiches/cat20120/c"
+        ],
+        "verduras_y_hortalizas_congeladas": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/verduras-y-hortalizas-congeladas/cat220022/c"
+        ]
+    },
+    "carniceria": {
+        "aves_y_pollo": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/aves-y-pollo/cat190012/c"
+        ],
+        "cerdo": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/cerdo/cat190011/c"
+        ],
+        "conejo": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/conejo/cat440001/c"
+        ],
+        "cordero": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/cordero/cat440002/c"
+        ],
+        "vacuno": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/vacuno/cat190010/c"
+        ],
+        "hamburguesas_y_carne_picada": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/hamburguesas/cat20154/c"
+        ],
+        "embutidos": [
+            "https://www.carrefour.es/supermercado/productos-frescos/carniceria/embutidos-frescos/cat20152/c"
+        ]
+    },
+    "pescaderia": {
+        "pescado": [
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/pescado-fresco/cat20125/c"
+        ],
+        "marisco": [
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/marisco-almejas-y-mejillones/cat20124/c"
+        ],
+        "bacalao_y_salazones": [
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/bacalao-y-salazones/cat20122/c"
+        ],
+        "pulpo_calamar_y_sepia": [
+            "https://www.carrefour.es/supermercado/productos-frescos/pescaderia/pulpo-calamar-y-sepia/cat20127/c"
+        ]
+    },
+    "frutas": {
+        "fruta_de_temporada": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/fruta-de-temporada/cat350001/c"
+        ],
+        "naranjas_y_otros_citricos": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/naranjas-y-otros-citricos/cat220007/c"
+        ],
+        "manzanas_y_peras": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/manzanas-y-peras/cat220010/c"
+        ],
+        "sandias_y_melones": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/sandias-y-melones/cat370013/c"
+        ],
+        "tropicales_y_exoticas": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/pinas-kiwis-aguacates-y-tropicales/cat220012/c"
+        ],
+        "platanos_y_bananas": [
+            "https://www.carrefour.es/supermercado/productos-frescos/frutas/platanos-y-bananas/cat220011/c"
+        ]
+    },
+    "verdures_y_hortalizas": {
+        "ensaladas_y_verduras": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/ensaladas-y-verduras-preparadas/cat220020/c"
+        ],
+        "tomates_pepinos_y_pimientos": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/tomates-y-pepinos/cat220018/c"
+        ],
+        "champinones_y_setas": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/setas-y-hongos/cat220021/c"
+        ],
+        "patatas_cebollas_y_ajos": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/patatas-cebollas-y-ajos/cat220017/c"
+        ],
+        "hortalizas": [
+            "https://www.carrefour.es/supermercado/productos-frescos/verduras-y-hortalizas/hortalizas/cat220019/c"
+        ]
+    },
+    "aperitivos_y_snacks": {
+        "frutos_secos": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/frutos-secos/cat390003/c"
+        ],
+        "patatas_fritas": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/patatas-fritas/cat20072/c"
+        ],
+        "snacks": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/snacks/cat20074/c",
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/tortitas/cat390007/c"
+        ],
+        "aceitunas_y_encurtidos": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/aceitunas-y-encurtidos/cat20067/c"
+        ],
+        "palomitas": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/palomitas/cat390005/c"
+        ],
+        "galletas_saladas": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/galletas-saladas/cat390002/c"
+        ],
+        "frutos_deshidratados": [
+            "https://www.carrefour.es/supermercado/la-despensa/aperitivos/frutas-desecadas/cat390004/c"
+        ],
+    }
+}

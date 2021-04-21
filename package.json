@@ -12,6 +12,5 @@
     "puppeteer": "^8.0.0",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-stealth": "^2.7.6"
-  },
-  "devDependencies": {}
+  }
 }
