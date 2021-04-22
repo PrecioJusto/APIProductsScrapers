@@ -1,6 +1,10 @@
 const puppeteer = require('puppeteer-extra');
 const fs = require('fs');
 const alcampoUrls = require('./alcampo_urls.json');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+
+puppeteer.use(StealthPlugin());
+
 
 (async () => {
 
@@ -44,7 +48,6 @@ async function getEachProductFromPage(page) {
     while(totalProducts != 0) {
         products.push(await getAllFromPage(page));
         const pageUrl = `${originalUrl}?page=${currentPage}`;
-        //console.log(pageUrl);
         await page.goto(pageUrl);
         const actualTotalProducts = await page.$eval('.totalResults', el => el.innerText);
 
