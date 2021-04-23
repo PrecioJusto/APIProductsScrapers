@@ -2,7 +2,7 @@
   "name": "scraping",
   "version": "1.0.0",
   "description": "The scrapping file different supermarkets info",
-  "main": "carrefour.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
