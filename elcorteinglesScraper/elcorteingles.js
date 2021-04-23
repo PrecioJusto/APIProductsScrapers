@@ -68,15 +68,11 @@ async function getProducts(page) {
                     JSON.parse(elem.dataset.json).discount == true
                         ? JSON.parse(elem.dataset.json).price.original
                         : JSON.parse(elem.dataset.json).price.final;
-                const offer_price =
-                    JSON.parse(elem.dataset.json).discount == true ? JSON.parse(elem.dataset.json).price.final : 0;
+                const offer_price = JSON.parse(elem.dataset.json).discount == true ? JSON.parse(elem.dataset.json).price.final : 0;
                 const offer_type =
-                    elem.querySelector(
-                        '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
-                    ) != null
-                        ? elem.querySelector(
-                              '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
-                          ).innerText
+                    elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description') != null
+                        ? elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description')
+                              .innerText
                         : false;
                 const stock =
                     elem.querySelector(
@@ -84,9 +80,7 @@ async function getProducts(page) {
                     ) != null
                         ? false
                         : true;
-                const img = changeImgSrc(
-                    elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src
-                );
+                const img = changeImgSrc(elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src);
 
                 return {
                     name: name,
@@ -95,7 +89,7 @@ async function getProducts(page) {
                     img: img,
                     offer_price: offer_price,
                     offer_type: offer_type,
-                    stock: true,
+                    stock: true, // pending change on fix.
                     supermarket: 'elcorteingles'
                 };
             }

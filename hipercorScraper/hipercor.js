@@ -49,13 +49,9 @@ const urls = require('./hipercorProducts.json');
                     recursive: true
                 });
             }
-            fs.writeFile(
-                `./data/products/hipercor/${category}/${subcategory}.json`,
-                JSON.stringify(cleanProducts),
-                err => {
-                    if (err) throw err;
-                }
-            );
+            fs.writeFile(`./data/products/hipercor/${category}/${subcategory}.json`, JSON.stringify(cleanProducts), err => {
+                if (err) throw err;
+            });
         }
         await page.close();
         await browser.close();
@@ -72,20 +68,14 @@ async function getProducts(page) {
                     JSON.parse(elem.dataset.json).discount == true
                         ? JSON.parse(elem.dataset.json).price.original
                         : JSON.parse(elem.dataset.json).price.final;
-                const offer_price =
-                    JSON.parse(elem.dataset.json).discount == true ? JSON.parse(elem.dataset.json).price.final : 0;
+                const offer_price = JSON.parse(elem.dataset.json).discount == true ? JSON.parse(elem.dataset.json).price.final : 0;
                 const offer_type =
-                    elem.querySelector(
-                        '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
-                    ) != null
-                        ? elem.querySelector(
-                              '.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description'
-                          ).innerText
+                    elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description') != null
+                        ? elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description')
+                              .innerText
                         : false;
                 const stock = JSON.parse(elem.dataset.json).status == 'AVAILABLE' ? true : false;
-                const img = changeImgSrc(
-                    elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src
-                );
+                const img = changeImgSrc(elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src);
 
                 return {
                     name: name,
@@ -94,7 +84,7 @@ async function getProducts(page) {
                     img: img,
                     offer_price: offer_price,
                     offer_type: offer_type,
-                    stock: stock,
+                    stock: stock, // pending change on fix.
                     supermarket: 'elcorteingles'
                 };
             }
