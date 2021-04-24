@@ -1,0 +1,463 @@
+{
+   "bebidas": {
+      "cava_champagne_y_sidra": [
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/cavas-champagne-y-espumosos/",
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/sidras/"
+      ],
+      "refrescos": [
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/refrescos-y-gaseosa/",
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/agua-y-soda/soda/"
+      ],
+      "cervezas": [
+         "https://www.elcorteingles.es/supermercado/bebidas/cervezas/"
+      ],
+      "aguas_y_zumos": [
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/agua-y-soda/agua-mineral-sin-gas/",
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/agua-y-soda/agua-mineral-con-gas/",
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/agua-y-soda/agua-mineral-sabores-funcionales/",
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/zumos-y-nectares/"
+      ],
+      "alcoholes": [
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/brandy-y-conac/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/cocktail-listo-para-tomar/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/ginebra/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/ron/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/tequila/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/vermouth-y-aperitivos/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/vodka/",
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/whisky/"
+      ],
+      "vinos": [
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/generosos/",
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/vino-blanco/",
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/vino-rosado/",
+         "https://www.elcorteingles.es/supermercado/bebidas/vinos/vino-tinto/"
+      ],
+      "licores_y_cremas": [
+         "https://www.elcorteingles.es/supermercado/bebidas/licores-y-alcoholes/anis-licores-y-cremas/"
+      ]
+   },
+   "alimentacion": {
+      "aceite_y_vinagre": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aceites/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/vinagres/"
+      ],
+      "salsa_y_tomatefrito": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/tomate-frito/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/tomate-frito/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/ketchup/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/mostazas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/mayonesa-y-salsa-ligera/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsa-para-pasta/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsa-para-carne-y-fondue/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsas-picantes-y-tabasco/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsa-para-ensaladas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsa-pescados-y-mariscos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsas-usos-diversos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/pasta-y-relleno-para-sandwich/"
+      ],
+      "cafes": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-en-monodosis/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-descafeinado-en-monodosis/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-natural-molido/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-mezcla-molido/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-descafeinado-molido/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-en-grano/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-soluble/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafe-soluble-descafeinado/"
+      ],
+      "cacao": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cacaos-y-cereales-solubles/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/chocolates-y-bombones/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cremas-de-cacao-cacahuete/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/dulces-de-navidad/"
+      ],
+      "galletas": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/galletas/"
+      ],
+      "cereales": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cereales-y-barritas/"
+      ],
+      "tes_e_infusiones": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/infusiones-y-tes/"
+      ],
+      "conservas": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/tomate-natural-triturado/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/menestras-y-macedonias/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/cardos-y-borraja/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/acelgas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/espinacas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/zanahorias/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/remolacha/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/puerros/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/judias-verdes/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/guisantes/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/pimientos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/pimientos-del-bierzo/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/pimientos-del-piquillo/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/maiz/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/alcachofas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/esparragos-verdes/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/tallos-de-esparragos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/yemas-de-esparragos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/champinon/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/tomate-entero-troceado/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/tomate-concentrado/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/esparragos-blancos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/choucrut-col-y-lombarda/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/ensaladas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/palmito/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/vegetales-diversos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-vegetales/setas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-de-pescado/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-de-frutas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/conservas-de-carne/"
+      ],
+      "huevos": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/huevos/"
+      ],
+      "pasta": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pasta-rellena/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pasta-semi-preparada/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/canelones/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/lasana/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pasta-fresca/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pastas-diversas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pasta-al-huevo/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/pastas-para-sopa/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/fideos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/tallarines/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/espaguetis/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/macarrones/"
+      ],
+      "arroz_y_cous_cous": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/arroz/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/couscous/"
+      ],
+      "legumbres": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/legumbres/"
+      ],
+      "harina_y_masas": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/pastas-y-masas/masas-y-bases-de-pizza/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/harina-de-maiz/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/harina-de-trigo/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/harinas-especiales/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/harinas-preparadas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/levadura/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/harinas-levaduras-y-preparados/semolas/"
+      ],
+      "azucar_y_edulcorantes": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/azucar-y-edulcorantes/"
+      ],
+      "panadería": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/pan/"
+      ],
+      "pasteleria_reposteria_y_bolleria": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/bolleria-y-pasteleria/",
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/reposteria-para-preparar/"
+      ],
+      "especias_y_sazonadores": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/especias-sazonadores-y-ayudas-para-cocinar/"
+      ],
+      "mermelada_confitura_y_miel": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/mermelada-confituras-y-miel/"
+      ],
+      "sal_y_bicarbonatos": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/sal/"
+      ]
+   },
+   "lacteos": {
+      "leche": [
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-entera/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-semidesnatada/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-desnatada/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-con-calcio/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-sin-lactosa/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-cardio/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-energia-y-crecimiento/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leches-especiales/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-fresca/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/leche-merengada/"
+      ],
+      "bebidas_vegetales": [
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/bebidas-vegetales/",
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-y-bebidas-vegetales/soja/"
+      ],
+      "batidos_y_horchatas": [
+         "https://www.elcorteingles.es/supermercado/lacteos/batidos/batido-vainilla/",
+         "https://www.elcorteingles.es/supermercado/bebidas/agua-refrescos-y-zumos/horchatas/horchatas/",
+         "https://www.elcorteingles.es/supermercado/lacteos/batidos/batido-fresa/"
+      ],
+      "cafes_y_chocolates_preparados": [
+         "https://www.elcorteingles.es/supermercado/desayunos-dulces-y-pan/cafes/cafes-preparados/",
+         "https://www.elcorteingles.es/supermercado/lacteos/batidos/batido-cacao/"
+      ],
+      "mantequilla_margarina_y_nata": [
+         "https://www.elcorteingles.es/supermercado/lacteos/mantequilla-y-margarina/",
+         "https://www.elcorteingles.es/supermercado/lacteos/nata/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/salsas-ketchup-y-tomate-frito/salsa-bechamel/"
+      ],
+      "leche_condensada_evaporada_polvo": [
+         "https://www.elcorteingles.es/supermercado/lacteos/leche-condensada-evaporada-polvo/"
+      ],
+      "yogures_y_postres": [
+         "https://www.elcorteingles.es/supermercado/lacteos/postres/",
+         "https://www.elcorteingles.es/supermercado/lacteos/yogures/"
+      ]
+   },
+   "congelados": {
+      "helados": [
+         "https://www.elcorteingles.es/supermercado/congelados/helados-postres-y-nata/"
+      ],
+      "pescado_y_marisco": [
+         "https://www.elcorteingles.es/supermercado/congelados/pescados-congelados/",
+         "https://www.elcorteingles.es/supermercado/congelados/pulpo-calamar-y-sepia/",
+         "https://www.elcorteingles.es/supermercado/congelados/mariscos-gulas-sucedaneo-de-angulas-y-surimis/",
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/gulas-guinas-y-surimis/"
+      ],
+      "pizzas_sushi_y_platos_preparados": [
+         "https://www.elcorteingles.es/supermercado/congelados/platos-preparados-congelados/",
+         "https://www.elcorteingles.es/supermercado/congelados/pizza-lasana-y-canelones/",
+         "https://www.elcorteingles.es/supermercado/congelados/precocinados-rebozados/",
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/sushi/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/platos-preparados/"
+      ],
+      "verduras_y_hortalizas_congeladas": [
+         "https://www.elcorteingles.es/supermercado/congelados/verduras-hortalizas-y-frutas/",
+         "https://www.elcorteingles.es/supermercado/congelados/salteados-congelados/"
+      ]
+   },
+   "carniceria": {
+      "aves_y_pollo": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/aves-y-pollo/"
+      ],
+      "cerdo": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/cerdo/"
+      ],
+      "conejo": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/conejo/"
+      ],
+      "cordero": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/cordero/"
+      ],
+      "vacuno": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/vacuno/"
+      ],
+      "hamburguesas_y_carne_picada": [
+         "https://www.elcorteingles.es/supermercado/frescos/carniceria/picadas-y-hamburguesas/"
+      ]
+   },
+   "pescaderia": {
+      "pescado": [
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/pescado-blanco/",
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/pescado-azul/"
+      ],
+      "marisco": [
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/marisco/",
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/marisco-de-concha/"
+      ],
+      "bacalao_y_salazones": [
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/ahumados-huevas-y-salazones/",
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/bacalao/"
+      ],
+      "pulpo_calamar_y_sepia": [
+         "https://www.elcorteingles.es/supermercado/frescos/pescaderia/pulpo-calamar-y-sepia/"
+      ]
+   },
+   "charcuteria": {
+      "foie_pates_y_sobrasadas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/foies-y-pates/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/sobrasada-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/sobrasada-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/sobrasada-al-corte/"
+      ],
+      "jamon_cocido_y_lacon": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/jamon-cocido-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambre-de-pavo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambre-de-pollo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/fiambres-envasados-diversos/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/lomo-cocido-y-asado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/paleta-cocida-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/jamon-cocido-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/fiambre-de-pavo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/fiambre-de-pollo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/paleta-cocida-y-lacon-al-corte/"
+      ],
+      "jamon_serrano_iberico_y_paletas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/jamon-y-paleta-curada-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/jamon-de-pato-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/jamon-y-paleta-iberica-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/embutidos-ibericos-diversos-envasados/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/joselito-y-5-jotas/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/jamones-y-paletas-curadas/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/joselito-y-5-jotas/"
+      ],
+      "salchichon_salami_y_fuet": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/salchichon-y-longaniza-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/fuet-y-espetec-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/salami-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/salchichon-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/salchichon-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/fuet-y-espetec/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/salami-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/salchichon-iberico-al-corte/"
+      ],
+      "mortadela_y_choped": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/chopped-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/mortadela-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/mortadela-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/chopped-al-corte/"
+      ],
+      "bacon_y_panceta": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/bacon-y-panceta-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/bacon-y-panceta-al-corte/"
+      ],
+      "salchichas": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/salchichas/"
+      ],
+      "chorizo_lomo_y_otros": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/chorizo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/lomo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/embutidos-diversos-envasados/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos/cecina-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/chorizo-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/curados-y-embutidos-ibericos/lomo-iberico-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/embutidos-frescos/chorizo-fresco-y-chistorra/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/embutidos-frescos/morcilla/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/fiambres-y-cocidos/cabeza-de-cerdo-envasada/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/chorizo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/chorizo-casero-y-regional/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/lomo-de-cerdo-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/curados-y-embutidos/cecina-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-frescos/chorizo-fresco-y-chistorra/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/chorizo-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/lomo-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/morcon-iberico-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/embutidos-ibericos/longaniza-iberica-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/fiambres-y-cocidos/chicharrones-y-cabeza-de-cerdo/"
+      ]
+   },
+   "quesos": {
+      "curados": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-curado-y-viejo-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-nacionales/queso-curado-al-corte/"
+      ],
+      "semicurados": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-semicurado-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-nacionales/queso-semicurado-al-corte/"
+      ],
+      "queso_fresco": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-fresco-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-nacionales/queso-fresco-nacional-al-corte/"
+      ],
+      "tierno": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-tierno-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-nacionales/queso-tierno-al-corte/"
+      ],
+      "queso_rallado": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-rallado/"
+      ],
+      "brie_y_camembert": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-brie-y-camembert-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-internacionales/queso-brie-y-camembert-al-corte/"
+      ],
+      "azul_y_roquefort": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-internacionales/queso-azul-y-roquefort-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-azul-y-roquefort-envasado/"
+      ],
+      "gouda_y_emmental": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-edam-y-gouda-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/queso-emmental-envasado/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-internacionales/queso-edam-bola-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-internacionales/queso-emmental-al-corte/",
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-internacionales/queso-gouda-al-corte/"
+      ],
+      "crema_de_queso": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-queso-envasado/quesos-envasados/cremas-y-quesos-para-untar/"
+      ],
+      "denominacion_de_origen": [
+         "https://www.elcorteingles.es/supermercado/frescos/charcuteria-y-quesos-al-corte/quesos-denominacion-de-origen/"
+      ]
+   },
+   "frutas": {
+      "fruta_de_temporada": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/fruta-de-temporada/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/uvas/"
+      ],
+      "naranjas_y_otros_citricos": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/citricos/"
+      ],
+      "manzanas_y_peras": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/manzanas-y-peras/"
+      ],
+      "sandias_y_melones": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/melones-y-sandias/"
+      ],
+      "tropicales_y_exoticas": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/frutas-tropicales-y-exoticas/"
+      ],
+      "platanos_y_bananas": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/frutas/platanos/"
+      ]
+   },
+   "verduras_y_hortalizas": {
+      "ensaladas_y_verduras": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas-preparadas/ensaladas-preparadas/"
+      ],
+      "tomates_pepinos_y_pimientos": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/tomates/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/pimientos/"
+      ],
+      "champinones_y_setas": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/champinones-y-setas/"
+      ],
+      "patatas_cebollas_y_ajos": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/patatas-yuca-y-jengibre/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/ajos-cebollas-y-ajetes/"
+      ],
+      "hortalizas": [
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas-preparadas/verduras-y-hortalizas-deshidratadas/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas-preparadas/verduras-y-hortalizas-preparadas/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/zanahorias-rabanos-y-puerros/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/lechugas-escarolas-y-endibias/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/judias-habas-y-guisantes/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/esparragos/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/coles-coliflor-y-broculi/",
+         "https://www.elcorteingles.es/supermercado/frescos/frutas-y-verduras/verduras-y-hortalizas/resto-de-verduras-y-hortalizas/"
+      ]
+   },
+   "aperitivos_y_snacks": {
+      "frutos_secos": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/nueces/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/almendras/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/avellanas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/pinones-y-pistachos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/cacahuetes/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/pipas-y-kikos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/cocktails/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/frutos-secos-diversos/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/ciruelas-pasas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/uvas-pasas/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/datiles/",
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/higos/"
+      ],
+      "patatas_fritas": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/patatas-fritas/"
+      ],
+      "snacks": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/aperitivos-diversos-y-snacks/"
+      ],
+      "aceitunas_y_encurtidos": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aceitunas-y-encurtidos/"
+      ],
+      "palomitas": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/palomitas/"
+      ],
+      "galletas_saladas": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/galletas-saladas/"
+      ],
+      "frutos_deshidratados": [
+         "https://www.elcorteingles.es/supermercado/alimentacion-general/aperitivos-y-frutos-secos/frutas-deshidratadas/"
+      ]
+   }
+}
