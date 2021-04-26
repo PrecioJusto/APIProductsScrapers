@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer-extra');
 const fs = require('fs');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
+puppeteer.use(StealthPlugin());
+
 const recipesUrls = 'https://www.carrefour.es/supermercado/recetas/';
 
 puppeteer.use(StealthPlugin());
@@ -15,7 +17,6 @@ puppeteer.use(StealthPlugin());
     await page.goto(recipesUrls);
 
     const urlsImages = await page.evaluate(() => {
-        //const cardRecipes = document.querySelectorAll('.receip-item-header > a > img');
         const cardRecipes = document.querySelectorAll('div.receip-item[data-tag*="baja"] > div.receip-item-header > a > img, div.receip-item[data-tag*="media"] > div.receip-item-header > a > img, div.receip-item[data-tag*="alta"] > div.receip-item-header > a > img');
         const links = [];
         for (let link of cardRecipes) {
@@ -26,12 +27,9 @@ puppeteer.use(StealthPlugin());
             if (link.src !== "https://static.carrefour.es/supermercado/bcc_static/catalogImages/creatividades/estaticas/recetas/nuevas/empanada.jpg") {
                 links.push(link.src);
             }
-            //links.push(link.src);
         }
         return links;
     });
-
-    //console.log(urlsImages);
 
     const allReceips = [];
     for (const urlImage of urlsImages) {
@@ -50,14 +48,8 @@ puppeteer.use(StealthPlugin());
         const infoReceip = await getAllInfoFromRecipe(pageReceip);
         infoReceip.img = urlImage;
         infoReceip.nameRecipe = nameRecipe;
-        //await pageReceip.waitForTimeout(2000);
-
         allReceips.push(infoReceip);
         await pageReceip.close();
-        //await page.waitForTimeout(3000);
-        //await page.goto("https://www.carrefour.es/supermercado/recetas/bacalao-dorado");
-        //const ingredients = getIngredientsFromRecipe(page);
-        //console.log(url);
     }
     console.log(allReceips);
 
@@ -71,16 +63,8 @@ puppeteer.use(StealthPlugin());
         if (err) throw err;
     });
 
-    /*
-    await page.waitFor(2000);
-    await page.goto('https://www.carrefour.es/supermercado/recetas/arroz-thai-con-gambon');
-    const recipe = await getAllInfoFromRecipe(page);
-    console.log(recipe);
-    */
-
-
-    //await page.close();
-    //await browser.close();
+    await page.close();
+    await browser.close();
 })();
 
 async function getAllInfoFromRecipe(page) {
