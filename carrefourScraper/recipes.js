@@ -21,8 +21,6 @@ puppeteer.use(StealthPlugin());
         const links = [];
         for (let link of cardRecipes) {
 
-            console.log(link.src + " ==?");
-
             //Receta rota
             if (link.src !== "https://static.carrefour.es/supermercado/bcc_static/catalogImages/creatividades/estaticas/recetas/nuevas/empanada.jpg") {
                 links.push(link.src);
@@ -51,7 +49,6 @@ puppeteer.use(StealthPlugin());
         allReceips.push(infoReceip);
         await pageReceip.close();
     }
-    console.log(allReceips);
 
     const dir = `./data/recipes/carrefour/`;
     if (!fs.existsSync(dir)) {
