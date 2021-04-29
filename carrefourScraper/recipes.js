@@ -17,11 +17,15 @@ puppeteer.use(StealthPlugin());
     await page.goto(recipesUrls);
 
     const urlsImages = await page.evaluate(() => {
-        const cardRecipes = document.querySelectorAll('div.receip-item[data-tag*="baja"] > div.receip-item-header > a > img, div.receip-item[data-tag*="media"] > div.receip-item-header > a > img, div.receip-item[data-tag*="alta"] > div.receip-item-header > a > img');
+        const baja = 'div.receip-item[data-tag*="baja"] > div.receip-item-header > a > img';
+        const media = 'div.receip-item[data-tag*="media"] > div.receip-item-header > a > img';
+        const alta = 'div.receip-item[data-tag*="alta"] > div.receip-item-header > a > img';
+
+        const cardRecipes = document.querySelectorAll(`${baja},${media},${alta}`);
         const links = [];
         for (let link of cardRecipes) {
 
-            //Receta rota
+            //broken recipe
             if (link.src !== "https://static.carrefour.es/supermercado/bcc_static/catalogImages/creatividades/estaticas/recetas/nuevas/empanada.jpg") {
                 links.push(link.src);
             }
@@ -65,12 +69,10 @@ puppeteer.use(StealthPlugin());
 })();
 
 async function getAllInfoFromRecipe(page) {
-    //const image = document.querySelector("")
-    const properties = await recogimientoDeInformalizacionRecetil(page);
+    const properties = await getInformation(page);
     const ingredients = await getIngredients(page);
     const preparation = await getPreparation(page);
     const necessaryProducts = await getNecessaryProducts(page);
-
 
     const infoRecipe = {
         properties: properties,
@@ -80,16 +82,11 @@ async function getAllInfoFromRecipe(page) {
     }
 
     return infoRecipe;
-
-
 }
 
 
-async function recogimientoDeInformalizacionRecetil(page) {
+async function getInformation(page) {
     const additionalInfo = await page.$eval('.receta-descripcion', containerInfo => {
-        let urlVideo = containerInfo.querySelector('div.video-wrapper > iframe');
-
-        if (urlVideo) urlVideo = urlVideo.src;
         const ellunesempiezo = containerInfo.querySelector("div.product-type > div.format > img.lunes");
         const author = containerInfo.querySelector("div.product-type > div.format > img.fabian");
         const despilfarro = containerInfo.querySelector("div.product-type > div.format > img.despilfarro");
@@ -115,7 +112,6 @@ async function recogimientoDeInformalizacionRecetil(page) {
 
 
         const properties = {
-            urlVideo: urlVideo,
             description: description,
             ellunesempiezo: ellunesempiezo ? true : false,
             author: author ? "Fabian León" : null,
@@ -131,10 +127,7 @@ async function recogimientoDeInformalizacionRecetil(page) {
             recipeYield: recipeYield ? recipeYield.parentElement.querySelector("p").innerText : null,
             calories: calories ? calories.parentElement.querySelector("p").innerText : null,
             cookTime: cookTime ? cookTime.parentElement.querySelector("p").innerText : null,
-
-
         }
-
 
         return properties;
     });
@@ -169,7 +162,6 @@ async function getNecessaryProducts(page) {
     const necessaryProducts = await page.$$eval('article.product-card-item:not(:last-child)', listCard => {
         return listCard.map(cardElement => {
             
-            // Replace de saltos de linea y trim de espacios vacios.
             const trimRepleace = function (string) {
                 return string.replace(/(\r\n|\n|\r)/gm, '').trim();
             };
