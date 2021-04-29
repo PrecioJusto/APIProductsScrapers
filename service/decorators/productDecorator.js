@@ -19,7 +19,7 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 };
 
 const allFiles = getAllFiles('../../data/products');
-const data = allFiles.forEach(fileString => {
+const data = allFiles.map(fileString => {
     console.log('Reading file ' + fileString);
     const file = fs.readFileSync(fileString);
     const products = JSON.parse(file);
@@ -34,7 +34,8 @@ const data = allFiles.forEach(fileString => {
             stock: prod.stock,
             super: prod.super,
             category: fileString, // not working
-            pack: extractor.getPack(prod.name)
+            pack: extractor.getPack(prod.name),
+            product_type: 'foodproduct'
         };
     });
 });
