@@ -7,7 +7,7 @@ puppeteer.use(StealthPlugin());
 
 (async () => {
     const browser = await puppeteer.launch({
-        headless: false
+        headless: true
     });
 
     for (let category in carrefourUrls) {
@@ -113,7 +113,7 @@ async function autoScroll(page) {
                     clearInterval(timer);
                     resolve();
                 }
-            }, 70);
+            }, 80);
         });
     });
 }
