@@ -1,30 +1,19 @@
-const fs = require("fs");
-const brain = require("../utils/brain.js");
-const mimir = require("../utils/bow.js"),
-  bow = mimir.bow,
-  dict = mimir.dict,
-  tfidf = mimir.tfidf,
-  tokenize = mimir.tokenize;
+const fs = require('fs');
+const genDict = require('../preprocessLayer/genDict.js');
+const mimir = require('../utils/bow.js');
+const neuralNetwork = require('../training/train.js');
 
-net = new brain.NeuralNetwork();
+// net = new brain.NeuralNetwork();    // maybe importing net instance from trainig/train.js
 
-console.log('Loading pre-trained model...');
-const file = fs.readFileSync('../models/model.json');
-const model = JSON.parse(file);
+// Loading pre-trained model...
+const model = fs.readFileSync('../models/model-XXX.json');
+neuralNetwork.net.fromJSON(JSON.parse(model));
 
-net.fromJSON(model);
-classify();
-
-export function classify(prod) {
-    const output = net.run(bow(prod, dict));
-    console.log(output);
-
-    const tmp = Object.keys(output).sort((a, b) => output[b] - output[a]).slice(0, 5);
-    const cleanedRes = tmp.map(elem => {
-        return {
-            brand: elem,
-            conf: output[elem]
-        }
-    })
-    console.log(cleanedRes);
+function classify(prod) {
+    const output = neuralNetwork.net.run(mimir.bow(prod, genDict.dict));
+    return Object.keys(output).sort((a, b) => output[b] - output[a]).shift();
 }
+
+module.exports = {
+    classify: classify
+};
