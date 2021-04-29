@@ -6,7 +6,7 @@ const neuralNetwork = require('../training/train.js');
 // net = new brain.NeuralNetwork();    // maybe importing net instance from trainig/train.js
 
 // Loading pre-trained model...
-const model = fs.readFileSync('../models/model-XXX.json');
+const model = fs.readFileSync('../models/model.json');
 neuralNetwork.net.fromJSON(JSON.parse(model));
 
 function classify(prod) {
