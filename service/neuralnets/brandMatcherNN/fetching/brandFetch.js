@@ -1,6 +1,6 @@
 const fs = require('fs');
 const genDict = require('../preprocessLayer/genDict.js');
-const mimir = require('../utils/bow.js');
+const mimir = require('../../../../utils/mimir.js');
 const neuralNetwork = require('../training/train.js');
 
 // net = new brain.NeuralNetwork();    // maybe importing net instance from trainig/train.js

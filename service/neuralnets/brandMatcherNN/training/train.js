@@ -1,8 +1,8 @@
 const fs = require('fs');
-const brain = require('../utils/brain.js');
+const brain = require('../../../../utils/brain.js');
 const dataset = require('../datasets/dataset-XXX.json');
 
-net = new brain.NeuralNetwork();
+const net = new brain.NeuralNetwork();
 
 net.train(dataset, {
     iterations: 1000,

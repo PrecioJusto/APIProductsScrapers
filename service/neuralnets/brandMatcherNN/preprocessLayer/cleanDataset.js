@@ -1,5 +1,5 @@
 const fs = require('fs');
-const mimir = require('../utils/mimir.js');
+const mimir = require('../../../../utils/mimir.js');
 const genDict = require('./genDict.js');
 const dirtyDataset = require('../datasets/dirtydataset-XXX.json');
 
