@@ -9,18 +9,18 @@ puppeteer.use(StealthPlugin());
 (async () => {
 
     const browser = await puppeteer.launch({
-        headless: false
+        headless: true
     });
 
     for (let category in alcampoUrls) {
         const page = await browser.newPage();
         for (let subCategory in alcampoUrls[category]) {
             const products = [];
-            for(let url of alcampoUrls[category][subCategory]) {
+            for (let url of alcampoUrls[category][subCategory]) {
                 await page.goto(url);
                 products.push(await getEachProductFromPage(page));
             }
-            
+
             const dir = `./data/products/alcampo/${category}/`;
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir, {
@@ -45,7 +45,7 @@ async function getEachProductFromPage(page) {
     let currentPage = 1;
 
 
-    while(totalProducts != 0) {
+    while (totalProducts != 0) {
         products.push(await getAllFromPage(page));
         const pageUrl = `${originalUrl}?page=${currentPage}`;
         await page.goto(pageUrl);
