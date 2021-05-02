@@ -4,19 +4,21 @@ const dataset = require('../datasets/dataset-XXX.json');
 
 const net = new brain.NeuralNetwork();
 
-net.train(dataset, {
-    iterations: 1000,
-    errorThresh: 0.0005,
-    log: true,
-    logPeriod: 10,
-    learningRate: 0.2,
-    momentum: 0.1,
-    callback: null,
-    callbackPeriod: 10,
-    timeout: Infinity
-});
+function train() {
+    net.train(dataset, {
+        iterations: 1000,
+        errorThresh: 0.0005,
+        log: true,
+        logPeriod: 10,
+        learningRate: 0.2,
+        momentum: 0.1,
+        callback: null,
+        callbackPeriod: 10,
+        timeout: Infinity
+    });
 
-saveModel(net.toJSON());
+    saveModel(net.toJSON());
+}
 
 function saveModel(model) {
     // Saving model...
@@ -35,5 +37,6 @@ function saveModel(model) {
 
 // Exporting neural network instance
 module.exports = {
-    net: net
+    net: net,
+    train: train
 };

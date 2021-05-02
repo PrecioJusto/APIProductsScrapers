@@ -1,55 +1,47 @@
 const fs = require('fs');
 const path = require('path');
+const brandDictionary = require('../../../../data/brands/allBrands.json');
 
-const getAllFiles = function (dirPath, arrayOfFiles) {
+const getAllFiles = (dirPath, arrayOfFiles) => {
     files = fs.readdirSync(dirPath);
 
     arrayOfFiles = arrayOfFiles || [];
 
-    files.forEach(function (file) {
+    files.forEach((file) => {
         if (fs.statSync(dirPath + '/' + file).isDirectory()) {
             arrayOfFiles = getAllFiles(dirPath + '/' + file, arrayOfFiles);
         } else {
-            arrayOfFiles.push(path.join(__dirname, dirPath, '/', file));
+            arrayOfFiles.push(path.join(dirPath, '/', file));
         }
     });
 
     return arrayOfFiles;
 };
 
-const dataset = [];
-
-const allFiles = getAllFiles('../../data/products');
+const allFiles = getAllFiles(path.resolve(__dirname + "../../../../../data/products"));
 console.time();
-allFiles.forEach(fileString => {
-    console.log('Reading file ' + fileString);
-    const file = fs.readFileSync(fileString);
-    const products = JSON.parse(file);
-    dataset.push(
-        products
-            .map(prod => brandMatcher(prod.name))
-            .flat(1)
-    );
-}).sort((a, b) => b.qs - a.qs); // not sure if this works.
+function genDataset() {
+    const dataset = allFiles.map(fileString => {
+        const file = fs.readFileSync(fileString);
+        const products = JSON.parse(file);
+        return products
+            .map(prod => {
+                if (prod != null && prod != undefined) return brandMatcher(prod.name);
+            })
+            .flat(1);
+    }).flat(1).sort((a, b) => b.qs - a.qs);
 
-console.timeEnd();
+    console.timeEnd();
 
-const dir = `../datasets`;
-if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, {
-        recursive: true
-    });
+    saveDataset(dataset);
 }
-
-fs.writeFile(`../datasets/dirtydataset-${Date.now()}.json`, JSON.stringify(dataset), err => {
-    if (err) throw err;
-});
 
 // Reformat func (please)
 function brandMatcher(product) {
     const result = [];
     const splittedWord = product.split(/[ -]+/);
 
+    /*
     splittedWord.forEach((word, idx, arr) => {
         let counter = splittedWord.length - idx;
         let possibleMatch = '';
@@ -59,15 +51,28 @@ function brandMatcher(product) {
             brandDictionary.forEach(brand => {
                 const sorensenDiceCoefficient = sorensenDice(possibleMatch, brand);
                 result.push({
-                    name: product,  
+                    name: product,
                     brand: brand,
                     qs: sorensenDiceCoefficient
                 });
             });
         }
     });
+    */
 
-    return result.sort((a, b) => b.qs - a.qs).shift();
+    const res = brandDictionary.map(brand => {
+        return {
+            name: product,
+            brand: brand,
+            qs: sorensenDice(product, brand)
+        }
+    }).sort((a, b) => b.qs - a.qs).shift();
+
+    //console.log(res);
+
+    return res;
+
+    //return result.sort((a, b) => b.qs - a.qs).shift();
 }
 
 function sorensenDice(l, r) {
@@ -93,4 +98,22 @@ function sorensenDice(l, r) {
     }
 
     return (2.0 * intersectionSize) / (l.length + r.length - 2);
+}
+
+function saveDataset(dataset) {
+    const dir = path.resolve(__dirname + `/../datasets`);
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, {
+            recursive: true
+        });
+    }
+
+    fs.writeFile(path.resolve(__dirname + `/../datasets/dirtydataset-${Date.now()}.json`), JSON.stringify(dataset), err => {
+        if (err) throw err;
+        console.log('Saved dataset');
+    });
+}
+
+module.exports = {
+    genDataset: genDataset
 }

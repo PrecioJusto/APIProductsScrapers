@@ -1,10 +1,12 @@
 const fs = require('fs');
 const mimir = require('../../../../utils/mimir.js');
-const dataset = require('../datasets/dirtydataset-XXX.json');
+const dataset = require('../datasets/dirtydataset-1619865880876.json');
 
-const names = dataset.map(elem => elem.name);
-const corpus = mimir.dict(names);
+function genDict() {
+    const names = dataset.filter(elem => elem != null && elem != undefined).map(elem => elem.name)
+    return mimir.dict(names);
+}
 
 module.exports = {
-    dict: corpus
+    genDict: genDict
 };

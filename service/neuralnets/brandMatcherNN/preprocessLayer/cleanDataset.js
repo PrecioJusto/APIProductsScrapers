@@ -1,24 +1,39 @@
+'use strict';
+
 const fs = require('fs');
+const path = require('path');
 const mimir = require('../../../../utils/mimir.js');
 const genDict = require('./genDict.js');
-const dirtyDataset = require('../datasets/dirtydataset-XXX.json');
+const dirtyDataset = require('../datasets/dirtydataset-1619865880876.json');
+const { dir } = require('console');
 
-// Cleaning dataset for input training
-const cleanDataset = dirtyDataset.map(prod => {
-    return {
-        name: mimir.bow(prod.name, genDict.dict),
-        brand: prod.brand,
-        qs: prod.qs
-    };
-});
+// Cleaning dataset for neural network training
+function cleanDataset() {
+    const dict = genDict.genDict();
+    const logStream = fs.createWriteStream(path.resolve(__dirname + `/../datasets/dataset-${Date.now()}.json`), { flags: 'a' });
+    logStream.write('[');
 
-const dir = `../datasets`;
-if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, {
-        recursive: true
-    });
+    let arr = [];
+    for (let i = 0; i < dirtyDataset.length; i++) {
+        if (dirtyDataset[i] !== null && dirtyDataset[i] !== undefined) {
+            arr.push({
+                name: mimir.bow(dirtyDataset[i].name, dict),
+                brand: dirtyDataset[i].brand,
+                qs: dirtyDataset[i].qs
+            });
+        }
+
+        if (i % 1000 === 0) {
+            console.log(i);
+            logStream.write(JSON.stringify(arr));
+            arr = [];
+        }
+    }
+
+    logStream.write(']');
+    logStream.end();
 }
 
-fs.writeFile(`../datasets/dataset-${Date.now()}.json`, JSON.stringify(cleanDataset), err => {
-    if (err) throw err;
-});
+module.exports = {
+    cleanDataset: cleanDataset
+}
