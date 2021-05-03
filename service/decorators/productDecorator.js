@@ -22,6 +22,7 @@ productDecorator();
 function productDecorator() {
     let productosNull = 0;
     const allFiles = getAllFiles(path.resolve(__dirname + "../../../data/products"));
+    /*
     const data = allFiles.map(fileString => {
         const file = fs.readFileSync(fileString);
         const products = JSON.parse(file);
@@ -45,9 +46,74 @@ function productDecorator() {
             }
         });
     }).flat(1);
+    */
 
-    console.log(data);
-    console.log(data.length)
+    const testdata = [
+        {
+            name: 'Tronquitos de Alaska FRUDESA 450 gr',
+            brand: 'FRUDESA',
+            img: 'https://www.alcampo.es/media/h96/hb8/8878513913886.jpg',
+            price: 123,
+            offer_price: 0,
+            offer_type: null,
+            stock: true,
+            super: 'alcampo',
+            category: 'aceite_y_vinagre',
+            pack: '_unknown',
+            product_type: 'foodproduct'
+        },
+        {
+            name: 'Crema de vinagre a la manzana SIBARI 225 g.',
+            brand: 'SIBARI',
+            img: 'https://www.alcampo.es/media/h36/h9a/9510413795358.jpg',
+            price: 124,
+            offer_price: 0,
+            offer_type: null,
+            stock: true,
+            super: 'alcampo',
+            category: 'aceite_y_vinagre',
+            pack: '_unknown',
+            product_type: 'foodproduct'
+        }, {
+            name: 'Crema de vinagre balsámico de vino blanco SIBARI 225 g.',
+            brand: 'SIBARI',
+            img: 'https://www.alcampo.es/media/h96/hb8/8878513913886.jpg',
+            price: 325,
+            offer_price: 0,
+            offer_type: null,
+            stock: true,
+            super: 'alcampo',
+            category: 'aceite_y_vinagre',
+            pack: '_unknown',
+            product_type: 'foodproduct'
+        }, {
+            name: 'Batido de fresa PRODUCTO ALCAMPO pack 6 uds. x 20 ml.',
+            brand: 'PRODUCTO ALCAMPO',
+            img: 'https://www.alcampo.es/media/h96/hb8/8878513913886.jpg',
+            price: 623,
+            offer_price: 0,
+            offer_type: null,
+            stock: true,
+            super: 'alcampo',
+            category: 'batidos_y_horchatas',
+            pack: '_unknown',
+            product_type: 'foodproduct'
+        }, {
+            name: 'Batido de chocolate 100% natural CENTRAL LECHERA ASTURIANA 6 x 200 ml.',
+            brand: 'CENTRAL LECHERA ASTURIANA',
+            img: 'https://www.alcampo.es/media/h96/hb8/8878513913886.jpg',
+            price: 125,
+            offer_price: 0,
+            offer_type: "3x2",
+            stock: true,
+            super: 'carrefour',
+            category: 'cacao',
+            pack: '_unknown',
+            product_type: 'foodproduct'
+        },
+    ];
+
+    return testdata;
 }
 
 function cleanImg(img) {
@@ -55,5 +121,5 @@ function cleanImg(img) {
 }
 
 module.exports = {
-    productDecorator: productDecorator
+    decorator: productDecorator
 }
