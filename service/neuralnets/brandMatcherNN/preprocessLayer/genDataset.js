@@ -19,8 +19,9 @@ const getAllFiles = (dirPath, arrayOfFiles) => {
 };
 
 const allFiles = getAllFiles(path.resolve(__dirname + "../../../../../data/products"));
-console.time();
 function genDataset() {
+    console.log('Generating dataset...');
+    console.time();
     const dataset = allFiles.map(fileString => {
         const file = fs.readFileSync(fileString);
         const products = JSON.parse(file);
@@ -41,7 +42,7 @@ function brandMatcher(product) {
     const result = [];
     const splittedWord = product.split(/[ -]+/);
 
-    /*
+
     splittedWord.forEach((word, idx, arr) => {
         let counter = splittedWord.length - idx;
         let possibleMatch = '';
@@ -58,8 +59,9 @@ function brandMatcher(product) {
             });
         }
     });
-    */
 
+
+    /*
     const res = brandDictionary.map(brand => {
         return {
             name: product,
@@ -67,12 +69,10 @@ function brandMatcher(product) {
             qs: sorensenDice(product, brand)
         }
     }).sort((a, b) => b.qs - a.qs).shift();
-
-    //console.log(res);
-
     return res;
+    */
 
-    //return result.sort((a, b) => b.qs - a.qs).shift();
+    return result.sort((a, b) => b.qs - a.qs).shift();
 }
 
 function sorensenDice(l, r) {

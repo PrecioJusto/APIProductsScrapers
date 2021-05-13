@@ -1,42 +1,49 @@
 const fs = require('fs');
-const brain = require('../../../../utils/brain.js');
-const dataset = require('../datasets/dataset-XXX.json');
+const path = require('path');
+const brain = require('brain.js');
+const { stringifyStream } = require('@discoveryjs/json-ext');
 
-const net = new brain.NeuralNetwork();
+//let net = new brain.NeuralNetworkGPU();
 
-function train() {
-    net.train(dataset, {
+function train(dataset) {
+    const nn = new brain.NeuralNetworkGPU();
+    console.log('Training model...');
+    console.log(dataset.length)
+    nn.train(dataset, {
         iterations: 1000,
         errorThresh: 0.0005,
         log: true,
-        logPeriod: 10,
-        learningRate: 0.2,
+        logPeriod: 1,
+        learningRate: 0.3,
         momentum: 0.1,
         callback: null,
         callbackPeriod: 10,
         timeout: Infinity
     });
-
-    saveModel(net.toJSON());
+    console.log('Ending training...');
+    saveModel(nn.toJSON());
 }
 
 function saveModel(model) {
-    // Saving model...
+    console.log("Saving model...")
+
     const date = Date.now();
-    const dir = `../models/`;
+    const dir = path.resolve(__dirname + `/../models`);
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, {
             recursive: true
         });
     }
-    fs.writeFile(`./models/model-${date}.json`, JSON.stringify(model), err => {
-        if (err) throw err;
-        console.log('Model succesfully saved!');
-    });
+
+    stringifyStream(model)
+        .pipe(fs.createWriteStream(__dirname + `/../models/model-${date}.json`));
+
+    console.log('Model succesfully saved!');
 }
 
 // Exporting neural network instance
 module.exports = {
-    net: net,
-    train: train
+    //net: net,
+    train: train,
+    saveModel: saveModel
 };

@@ -1,11 +1,9 @@
 'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const mimir = require('../../../../utils/mimir.js');
 const genDict = require('./genDict.js');
 const dirtyDataset = require('../datasets/dirtydataset-1619865880876.json');
-const { dir } = require('console');
 
 // Cleaning dataset for neural network training
 function cleanDataset() {

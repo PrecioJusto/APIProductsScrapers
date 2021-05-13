@@ -22,23 +22,23 @@ productDecorator();
 function productDecorator() {
     let productosNull = 0;
     const allFiles = getAllFiles(path.resolve(__dirname + "../../../data/products"));
-    /*
+
     const data = allFiles.map(fileString => {
         const file = fs.readFileSync(fileString);
         const products = JSON.parse(file);
         return products.map(prod => {
             if (prod != null && prod != undefined && prod != "null") {
                 return {
-                    name: prod.name,
-                    brand: extractor.getBrand(prod.name),
-                    img: cleanImg(prod.img),
-                    price: extractor.formatPrice(prod.price),
+                    prodname: prod.name,
+                    branname: extractor.getBrand(prod.name),
+                    prodimg: cleanImg(prod.img),
+                    suprprice: extractor.formatPrice(prod.price),
                     offer_price: extractor.formatPrice(prod.offer_price),
                     offer_type: prod.offer_type,
-                    stock: prod.stock,
-                    super: prod.super,
-                    category: extractor.getCategory(fileString),
-                    pack: extractor.getPack(prod.name),
+                    suprstock: prod.stock,
+                    supename: prod.super,
+                    catename: extractor.getCategory(fileString),
+                    packquantity: extractor.getPack(prod.name),
                     product_type: 'foodproduct'
                 };
             } else {
@@ -46,7 +46,7 @@ function productDecorator() {
             }
         });
     }).flat(1);
-    */
+
 
     const testdata = [
         {

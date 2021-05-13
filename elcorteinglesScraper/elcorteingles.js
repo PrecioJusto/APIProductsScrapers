@@ -7,7 +7,7 @@ const urls = require('./eciProducts.json');
 (async () => {
     for (let category in urls) {
         const browser = await puppeteer.launch({
-            headless: true
+            headless: false
         });
 
         const page = await browser.newPage();
@@ -72,7 +72,7 @@ async function getProducts(page) {
                 const offer_type =
                     elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description') != null
                         ? elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description')
-                              .innerText
+                            .innerText
                         : false;
                 const stock =
                     elem.querySelector(
