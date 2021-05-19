@@ -28,7 +28,7 @@ function productDecorator() {
     const data = allFiles.map(fileString => {
         const file = fs.readFileSync(fileString);
         const products = JSON.parse(file);
-        return products.map(prod => {
+        const allProducts = products.map(prod => {
             if (prod != null && prod != undefined && prod != "null") {
                 console.log(prod.name);
                 return {
@@ -36,8 +36,9 @@ function productDecorator() {
                     brand: extractor.getBrand(prod),
                     img: cleanImg(prod.img),
                     price: extractor.formatPrice(prod.price),
-                    offer_price: extractor.formatPrice(prod.offer_price),
-                    offer_type: prod.offer_type,
+                    offer: extractor.getOffer(),
+                    //offer_price: extractor.formatPrice(prod.offer_price),
+                    //offer_type: prod.offer_type,
                     stock: prod.stock,
                     supermarketName: prod.super,
                     categoryName: extractor.getCategory(fileString),
@@ -48,6 +49,8 @@ function productDecorator() {
                 productosNull++;
             }
         });
+
+
     }).flat(1);
 
     console.timeEnd();
