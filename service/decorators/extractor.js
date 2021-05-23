@@ -19,17 +19,17 @@ function getBrand(product) {
     }
 
     if (result.length > 0) {
-        return result.reduce((a, b) => a.brand.length > b.brand.length ? a : b).brand;
+        return result.reduce((a, b) => (a.brand.length > b.brand.length ? a : b)).brand;
     }
 
     if (!isDirectCoincidence) {
         const splittedWord = product.name.split(/[ -]+/);
 
-
         splittedWord.forEach((word, idx, arr) => {
             brandDictionary.forEach(brand => {
                 const fullNameCoefficient = sorensenDice(product.name, brand);
                 const sorensenDiceCoefficient = sorensenDice(word, brand);
+
                 if (sorensenDiceCoefficient * 0.7 + fullNameCoefficient * 0.3 > splitter) {
                     result.push({
                         name: product.name,
@@ -51,16 +51,16 @@ function getBrand(product) {
             });
         });
     }
-
     return result.reduce((a, b) => {
         return a.qs > b.qs ? a.brand : b.brand;
     }, '_unknown');
 }
 
 function formatPrice(str) {
-    str = str.replace("'", ".");
-    str = str.replace(",", ".");
-    if ((typeof str) === "string") {
+    str = str.replace("'", '.');
+    str = str.replace(',', '.');
+    str = str.replace('€', '');
+    if (typeof str === 'string') {
         const splittedStr = str.split(' ');
         let price = 0;
         for (ss of splittedStr) {
@@ -81,7 +81,7 @@ function getPack(product_name) {
         const splittedName = product_name.split(' ');
         for (let i = 0; i < splittedName.length; i++) {
             if (splittedName[i].includes('pack')) {
-                if (splittedName[i + 1] === "de") {
+                if (splittedName[i + 1] === 'de') {
                     return parseInt(splittedName[i + 2]);
                 } else {
                     return parseInt(splittedName[i + 1]);
@@ -93,11 +93,65 @@ function getPack(product_name) {
 }
 
 function getCategory(fileString) {
-    return fileString.split(/[\/|\\]/g).pop().replace('.json', '');
+    return fileString
+        .split(/[\/|\\]/g)
+        .pop()
+        .replace('.json', '');
 }
 
-function getContainer(product) {
+function getContainer(product) {}
 
+function getOffer(product) {
+    if (product.offer_type) {
+        return offerMatcher(product.offer_type, product.supermarket);
+    } else if (product.offer_price) {
+        return {
+            offer_type: 'offerpercentage',
+            ofpepreviousprice: formatPrice(product.offer_price),
+            ofpepercentage: (product.offer_price / product.price) * 100 - 100
+        };
+    }
+}
+
+function offerMatcher(offer_type, supermarket) {
+    if (supermarket == 'alcampo') return { offer_type: 'offerunknown', ofunname: 'unknown' };
+    if (supermarket == 'carrefour') {
+        if (offer_type.includes('ª al -')) {
+            return {
+                offer_type: 'offerunitpercentage',
+                ofupunitaffected: offer_type.charAt(0),
+                ofuppercentage: offer_type.substring(offer_type.length - 3, offer_type.length)
+            };
+        } else if (offer_type.charAt(1) === 'x' && offer_type.length == 3) {
+            return {
+                offer_type: 'offerunit',
+                ofunfirst: offer_type.charAt(0),
+                ofunsecond: offer_type.charAt(2)
+            };
+        }
+    }
+    if (supermarket == 'elcorteingles' || supermarket == 'hipercor') {
+        if (offer_type.includes('ª unidad al')) {
+            return {
+                offer_type: 'offerunitpercentage',
+                ofupunitaffected: offer_type.charAt(0),
+                ofuppercentage: offer_type.substring(13, 15)
+            };
+        } else if (offer_type.includes('Lleva ') && offer_type.includes(' y paga ')) {
+            return {
+                offer_type: 'offerunit',
+                ofunfirst: offer_type.charAt(6),
+                ofunsecond: offer_type.charAt(offer_type.length - 1)
+            };
+        } else if (offer_type.includes('Lleva ') && offer_type.includes(' unidades por ')) {
+            return {
+                offer_type: 'offerunitplainprice',
+                ofupunits: offer_type.charAt(6),
+                ofupprice: formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, ''))
+            };
+        }
+    }
+    return { offer_type: 'offerunknown', ofunname: offer_type };
 }
 
 function sorensenDice(l, r) {
@@ -131,5 +185,6 @@ module.exports = {
     getPack: getPack,
     getCategory: getCategory,
     getContainer: getContainer,
-    sorensenDice: sorensenDice
+    sorensenDice: sorensenDice,
+    getOffer: getOffer
 };
