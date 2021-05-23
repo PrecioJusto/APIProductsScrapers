@@ -83,7 +83,7 @@ async function getAllFromPage(page) {
                 offer_price: 0,
                 offer_type: offer,
                 stock: stock,
-                super: 'alcampo'
+                supermarket: 'alcampo'
             };
         });
     });
