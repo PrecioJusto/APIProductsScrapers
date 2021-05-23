@@ -72,7 +72,7 @@ async function getProducts(page) {
                 const offer_type =
                     elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description') != null
                         ? elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description')
-                              .innerText
+                            .innerText
                         : false;
                 const stock = JSON.parse(elem.dataset.json).status == 'AVAILABLE' ? true : false;
                 const img = changeImgSrc(elem.querySelector('.product_tile-left_container > .product_tile-image > a > img').src);
@@ -85,7 +85,7 @@ async function getProducts(page) {
                     offer_price: offer_price,
                     offer_type: offer_type,
                     stock: stock, // pending change on fix.
-                    supermarket: 'elcorteingles'
+                    supermarket: 'hipercor'
                 };
             }
 
