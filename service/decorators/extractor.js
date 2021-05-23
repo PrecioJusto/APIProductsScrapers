@@ -17,7 +17,7 @@ function getBrand(product) {
     }
 
     if (result.length > 0) {
-        return result.reduce((a, b) => a.brand.length > b.brand.length ? a : b);
+        return result.reduce((a, b) => (a.brand.length > b.brand.length ? a : b));
     }
 
     if (!isDirectCoincidence) {
@@ -32,7 +32,6 @@ function getBrand(product) {
                     qs: sorensenDiceCoefficient * 0.7 + fullNameCoefficient * 0.3
                 });
 
-
                 if (arr[idx + 1] != undefined) {
                     const sorensenDiceCoefficient2 = sorensenDice(word + ' ' + arr[idx + 1], brand);
                     result.push({
@@ -45,11 +44,11 @@ function getBrand(product) {
         });
     }
 
-    return result.reduce((a, b) => a.qs > b.qs ? a : b);
+    return result.reduce((a, b) => (a.qs > b.qs ? a : b));
 }
 
 function formatPrice(str) {
-    if ((typeof str) === "string") {
+    if (typeof str === 'string') {
         const splittedStr = str.split(' ');
         let price = 0;
         splittedStr.forEach(ss => {
@@ -70,7 +69,7 @@ function getPack(product_name) {
         const splittedName = product_name.split(' ');
         for (let i = 0; i < splittedName.length; i++) {
             if (splittedName[i].includes('pack')) {
-                if (splittedName[i + 1] === "de") {
+                if (splittedName[i + 1] === 'de') {
                     return parseInt(splittedName[i + 2]);
                 } else {
                     return parseInt(splittedName[i + 1]);
@@ -82,11 +81,65 @@ function getPack(product_name) {
 }
 
 function getCategory(fileString) {
-    return fileString.split(/[\/|\\]/g).pop().replace('.json', '');
+    return fileString
+        .split(/[\/|\\]/g)
+        .pop()
+        .replace('.json', '');
 }
 
-function getContainer(product) {
+function getContainer(product) {}
 
+function getOffer(product) {
+    if (product.offer_type) {
+        return offerMatcher(product.offer_type, product.supermarket);
+    } else if (product.offer_price) {
+        return {
+            offer_type: 'offerpercentage',
+            ofpepreviousprice: formatPrice(product.offer_price),
+            ofpepercentage: (product.offer_price / product.price) * 100 - 100
+        };
+    }
+}
+
+function offerMatcher(offer_type, supermarket) {
+    if (supermarket == 'alcampo') return { offer_type: 'offerunknown', ofunname: 'unknown' };
+    if (supermarket == 'carrefour') {
+        if (offer_type.includes('ª al -')) {
+            return {
+                offer_type: 'offerunitpercentage',
+                ofupunitaffected: offer_type.charAt(0),
+                ofuppercentage: offer_type.substring(offer_type.length - 3, offer_type.length)
+            };
+        } else if (offer_type.charAt(1) === 'x' && offer_type.length == 3) {
+            return {
+                offer_type: 'offerunit',
+                ofunfirst: offer_type.charAt(0),
+                ofunsecond: offer_type.charAt(2)
+            };
+        }
+    }
+    if (supermarket == 'elcorteingles' || supermarket == 'hipercor') {
+        if (offer_type.includes('ª unidad al')) {
+            return {
+                offer_type: 'offerunitpercentage',
+                ofupunitaffected: offer_type.charAt(0),
+                ofuppercentage: offer_type.substring(13, 15)
+            };
+        } else if (offer_type.includes('Lleva ') && offer_type.includes(' y paga ')) {
+            return {
+                offer_type: 'offerunit',
+                ofunfirst: offer_type.charAt(6),
+                ofunsecond: offer_type.charAt(offer_type.length - 1)
+            };
+        } else if (offer_type.includes('Lleva ') && offer_type.includes(' unidades por ')) {
+            return {
+                offer_type: 'offerunitplainprice',
+                ofupunits: offer_type.charAt(6),
+                ofupprice: formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, '').replace(',', '.').replace('€', ''))
+            };
+        }
+    }
+    return { offer_type: 'offerunknown', ofunname: offer_type };
 }
 
 function sorensenDice(l, r) {
@@ -118,5 +171,6 @@ module.exports = {
     getBrand: getBrand,
     formatPrice: formatPrice,
     getPack: getPack,
-    getCategory: getCategory
+    getCategory: getCategory,
+    getOffer: getOffer
 };
