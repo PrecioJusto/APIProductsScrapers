@@ -59,6 +59,7 @@ function getBrand(product) {
 function formatPrice(str) {
     str = str.replace("'", '.');
     str = str.replace(',', '.');
+    str = str.replace('€', '');
     if (typeof str === 'string') {
         const splittedStr = str.split(' ');
         let price = 0;
@@ -146,7 +147,7 @@ function offerMatcher(offer_type, supermarket) {
             return {
                 offer_type: 'offerunitplainprice',
                 ofupunits: offer_type.charAt(6),
-                ofupprice: formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, '').replace(',', '.').replace('€', ''))
+                ofupprice: formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, ''))
             };
         }
     }
