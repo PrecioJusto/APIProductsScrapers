@@ -1,5 +1,6 @@
 const brandDictionary = require('../../data/brands/allBrands.json');
-// const containerTypes = ["lata", "garrafa", "botella", "brik", ""]
+const containerTypes = ["lata", "garrafa", "botella", "brik", "bidon", "bidón"];
+const containerUnits = ["l", "cl", "ml"];
 
 function getBrand(product) {
     const result = [];
@@ -99,7 +100,45 @@ function getCategory(fileString) {
         .replace('.json', '');
 }
 
-function getContainer(product) {}
+function getContainer(product) {
+    product.name = product.name.replace('.', ' ');
+    let result;
+    containerTypes.forEach(container => {
+        if (product.name.includes(` ${container} `)) {
+            const containerType = container;
+
+            containerUnits.forEach(unit => {
+                if (product.name.includes(` ${unit} `)) {
+                    const containerUnit = unit;
+                    const splittedName = product.name.split(' ');
+                    let indexOf = 0;
+
+                    for (word of splittedName) {
+                        if (word === unit) {
+                            indexOf = splittedName.indexOf(word) - 1;
+                            break;
+                        }
+                    }
+
+                    const quantity = splittedName[indexOf].replace("'", '.').replace(',', '.');
+
+                    if (parseFloat(quantity)) {
+                        const quantityFloat = parseFloat(quantity);
+
+                        result = {
+                            containerType: containerType,
+                            containerUnit: containerUnit,
+                            containerQuantity: quantityFloat
+                        }
+                    }
+                }
+            });
+        }
+    });
+
+    if (result) return result;
+    return {};
+}
 
 function getOffer(product) {
     if (product.offer_type) {
@@ -107,8 +146,8 @@ function getOffer(product) {
     } else if (product.offer_price) {
         return {
             offer_type: 'offerpercentage',
-            ofpepreviousprice: formatPrice(product.offer_price),
-            ofpepercentage: (product.offer_price / product.price) * 100 - 100
+            ofpepreviousprice: formatPrice(product.price),
+            ofpepercentage: (formatPrice(product.price) / formatPrice(product.offer_price)) * 100 - 100
         };
     }
 }
