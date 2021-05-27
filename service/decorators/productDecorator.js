@@ -1,4 +1,3 @@
-const { Console } = require('console');
 const fs = require('fs');
 const path = require('path');
 const extractor = require('./extractor.js');
@@ -9,16 +8,6 @@ Array.prototype.performanceFilter = function (fn) {
     for (let i = 0; i < this.length; i++) {
         if (fn(this[i])) {
             f.push(this[i]);
-        }
-    }
-    return f;
-};
-
-const fil = (fn, a) => {
-    const f = []; //final
-    for (let i = 0; i < a.length; i++) {
-        if (fn(a[i])) {
-            f.push(a[i]);
         }
     }
     return f;
@@ -48,86 +37,47 @@ function readFiles(filePath) {
 }
 
 function generateThreads(prod, fileString) {
+    if(!prod) return;
+    // if(extractor.getCategory(fileString) !== 'arroz_y_cous_cous') return;
     return new Promise(resolve => {
-        if (extractor.getCategory(fileString) === 'aceite_y_vinagre') {
-            return resolve({
-                name: prod.name,
-                brand: extractor.getBrand(prod),
-                img: cleanImg(prod.img),
-                price: extractor.formatPrice(prod.price),
-                //offer: extractor.getOffer(),
-                //offer_price: extractor.formatPrice(prod.offer_price),
-                //offer_type: prod.offer_type,
-                stock: prod.stock,
-                container: extractor.getContainer(prod),
-                supermarketName: prod.supermarket,
-                categoryName: extractor.getCategory(fileString),
-                pack: extractor.getPack(prod.name),
-                product_type: 'foodproduct'
-            });
-        }
+        return resolve({
+            name: prod.name,
+            brand: extractor.getBrand(prod),
+            img: cleanImg(prod.img),
+            price: (prod.offer_price) ? extractor.formatPrice(prod.offer_price) : extractor.formatPrice(prod.price),
+            offer: extractor.getOffer(prod),
+            stock: prod.stock,
+            container: extractor.getContainer(prod),
+            supermarketName: prod.supermarket,
+            categoryName: extractor.getCategory(fileString),
+            pack: extractor.getPack(prod.name),
+            product_type: 'foodproduct'
+        });
     });
 }
 
 async function productDecorator() {
-    let productosNull = 0;
     const allFiles = getAllFiles(path.resolve(__dirname + '../../../data/products'));
 
-    /*
-    const filesData = await Promise.all(allFiles.map(readFiles))
-
-    const data2 = filesData.map(products => {
-        return products.reduce()
-    })
-    */
-
     console.time('Productos');
+    let promises = allFiles.map(fileString => {
+        const file = fs.readFileSync(fileString);
+        const products = JSON.parse(file);
+        console.log(fileString)
+        return products.map(prod => generateThreads(prod, fileString));
+    }).flat(1);
 
-    const data = /*await*/ allFiles
-        .map(
-            /*async*/ fileString => {
-                const file = fs.readFileSync(fileString);
-                const products = JSON.parse(file);
+    // Cleaning undefined promises
+    promises = promises.filter(promise => promise);
 
-                //const threadedWorks = products.map(prod => generateThreads(prod, fileString));
-                //return await Promise.all(threadedWorks);
-
-                return products.reduce((res, prod) => {
-                    if (
-                        prod != null &&
-                        prod != undefined &&
-                        prod != 'null' /* && extractor.getCategory(fileString) === 'aceite_y_vinagre'*/
-                    ) {
-                        res.push({
-                            name: prod.name,
-                            brand: extractor.getBrand(prod),
-                            img: cleanImg(prod.img),
-                            price: extractor.formatPrice(prod.price),
-                            offer: extractor.getOffer(prod),
-                            stock: prod.stock,
-                            container: extractor.getContainer(prod),
-                            supermarketName: prod.supermarket,
-                            categoryName: extractor.getCategory(fileString),
-                            pack: extractor.getPack(prod.name),
-                            product_type: 'foodproduct'
-                        });
-                    } else {
-                        productosNull++;
-                    }
-                    return res;
-                }, []);
-            }
-        )
-        .flat(1);
-
-    //const data = await Promise.all(promises);
+    const products = await Promise.all(promises);
 
     console.timeEnd('Productos');
-    console.log('data.length', data.length);
+
     console.time('Procesado_prods');
 
-    const rv = data.reduce((res, prod) => {
-        const heuristicFilter = data.performanceFilter(
+    const linkedProducts = products.reduce((res, prod) => {
+        const heuristicFilter = products.performanceFilter(
             p =>
                 prod.categoryName === p.categoryName &&
                 prod.brand === p.brand &&
@@ -140,8 +90,8 @@ async function productDecorator() {
             supermarket.values = supermarket.values.reduce((a, b) =>
                 extractor.sorensenDice(prod.name, a.name) > extractor.sorensenDice(prod.name, b.name) ? a : b
             );
-            const index = data.indexOf(supermarket.values);
-            data.splice(index, 1);
+            const index = products.indexOf(supermarket.values);
+            products.splice(index, 1);
         });
 
         const coincidences = groupedBySupermarket.map(supermarket => {
@@ -150,7 +100,8 @@ async function productDecorator() {
                 img: supermarket.values.img,
                 price: supermarket.values.price,
                 stock: supermarket.values.stock,
-                supermarket: supermarket.key
+                supermarket: supermarket.key,
+                offer: supermarket.values.offer
             };
         });
 
@@ -173,22 +124,18 @@ async function productDecorator() {
             brand: prod.brand,
             category: prod.categoryName,
             supermarketProducts: coincidences,
+            container: prod.container,
             pack: prod.pack,
             product_type: prod.product_type
         });
 
-        console.log('data.length', data.length);
+        console.log('data.length', products.length);
 
         return res;
     }, []);
     console.timeEnd('Procesado_prods');
 
-    //console.log(rv);
-    //console.log('-----')
-    console.log('-----');
-    console.log(rv.length);
-    console.log('-----');
-    console.log(rv[0]);
+    return linkedProducts;
 }
 
 function groupBy(xs, key) {
