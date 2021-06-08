@@ -5,7 +5,7 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
 puppeteer.use(StealthPlugin());
 
-(async () => {
+async function executeCarrefour() {
     const browser = await puppeteer.launch({
         headless: true
     });
@@ -31,7 +31,7 @@ puppeteer.use(StealthPlugin());
         await page.close();
     }
     await browser.close();
-})();
+}
 
 async function getProducts(page) {
     // Obtiene productos que se muestran actualmente y total de productos. Ej [1],[24],[1008]
@@ -117,3 +117,7 @@ async function autoScroll(page) {
         });
     });
 }
+
+module.exports = {
+    executeCarrefour: executeCarrefour
+};

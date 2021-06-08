@@ -8,7 +8,7 @@ const recipesUrls = 'https://www.carrefour.es/supermercado/recetas/';
 
 puppeteer.use(StealthPlugin());
 
-(async () => {
+async function executeRecipes() {
     const browser = await puppeteer.launch({
         headless: true
     });
@@ -24,9 +24,11 @@ puppeteer.use(StealthPlugin());
         const cardRecipes = document.querySelectorAll(`${baja},${media},${alta}`);
         const links = [];
         for (let link of cardRecipes) {
-
             //broken recipe
-            if (link.src !== "https://static.carrefour.es/supermercado/bcc_static/catalogImages/creatividades/estaticas/recetas/nuevas/empanada.jpg") {
+            if (
+                link.src !==
+                'https://static.carrefour.es/supermercado/bcc_static/catalogImages/creatividades/estaticas/recetas/nuevas/empanada.jpg'
+            ) {
                 links.push(link.src);
             }
         }
@@ -36,15 +38,13 @@ puppeteer.use(StealthPlugin());
     const allReceips = [];
     for (const urlImage of urlsImages) {
         const pageReceip = await browser.newPage();
-        const pageUrl = await page.evaluate((urlImage) => {
-           return document.querySelector(`img[src="${urlImage}"]`).parentNode.href;
+        const pageUrl = await page.evaluate(urlImage => {
+            return document.querySelector(`img[src="${urlImage}"]`).parentNode.href;
         }, urlImage);
 
-        const nameRecipe = await page.evaluate((urlImage) => {
+        const nameRecipe = await page.evaluate(urlImage => {
             return document.querySelector(`img[src="${urlImage}"]`).parentNode.title;
-         }, urlImage);
-
-
+        }, urlImage);
 
         await pageReceip.goto(pageUrl);
         const infoReceip = await getAllInfoFromRecipe(pageReceip);
@@ -66,7 +66,7 @@ puppeteer.use(StealthPlugin());
 
     await page.close();
     await browser.close();
-})();
+}
 
 async function getAllInfoFromRecipe(page) {
     const properties = await getInformation(page);
@@ -79,42 +79,39 @@ async function getAllInfoFromRecipe(page) {
         ingredients: ingredients,
         preparation: preparation,
         necessaryProducts: necessaryProducts
-    }
+    };
 
     return infoRecipe;
 }
 
-
 async function getInformation(page) {
     const additionalInfo = await page.$eval('.receta-descripcion', containerInfo => {
-        const ellunesempiezo = containerInfo.querySelector("div.product-type > div.format > img.lunes");
-        const author = containerInfo.querySelector("div.product-type > div.format > img.fabian");
-        const despilfarro = containerInfo.querySelector("div.product-type > div.format > img.despilfarro");
-        const gourmet = containerInfo.querySelector("div.product-type > div.format > img.gourmet");
-        const bio = containerInfo.querySelector("div.product-type > div.format > span.bio");
-        const gluten = containerInfo.querySelector("div.product-type > div.format > span.gluten");
-        const lactosa = containerInfo.querySelector("div.product-type > div.format > span.lactosa");
-        const vegano = containerInfo.querySelector("div.product-type > div.format > span.vegano");
-        const vegetariano = containerInfo.querySelector("div.product-type > div.format > span.vegetariano");
-        const difficulty = containerInfo.querySelector("div.product-type > div.format > img.difficulty");
+        const ellunesempiezo = containerInfo.querySelector('div.product-type > div.format > img.lunes');
+        const author = containerInfo.querySelector('div.product-type > div.format > img.fabian');
+        const despilfarro = containerInfo.querySelector('div.product-type > div.format > img.despilfarro');
+        const gourmet = containerInfo.querySelector('div.product-type > div.format > img.gourmet');
+        const bio = containerInfo.querySelector('div.product-type > div.format > span.bio');
+        const gluten = containerInfo.querySelector('div.product-type > div.format > span.gluten');
+        const lactosa = containerInfo.querySelector('div.product-type > div.format > span.lactosa');
+        const vegano = containerInfo.querySelector('div.product-type > div.format > span.vegano');
+        const vegetariano = containerInfo.querySelector('div.product-type > div.format > span.vegetariano');
+        const difficulty = containerInfo.querySelector('div.product-type > div.format > img.difficulty');
         const recipeCategory = containerInfo.querySelector('div.product-type > div.format > p[itemprop="recipeCategory"]');
         const recipeYield = containerInfo.querySelector('div.product-type > div.format > p[itemprop="recipeYield"]');
         const calories = containerInfo.querySelector('div.product-type > div.format > p[itemprop="calories"]');
         const cookTime = containerInfo.querySelector('div.product-type > div.format > p[itemprop="cookTime"]');
 
-
-        let description = "";
+        let description = '';
         let descriptionRecipeType1 = containerInfo.querySelector('p.receip-description');
         if (descriptionRecipeType1) description = descriptionRecipeType1.innerText;
 
         let descriptionRecipeType2 = containerInfo.querySelector('div.receta-descripcion > p');
         if (descriptionRecipeType1 == null && descriptionRecipeType2) description = descriptionRecipeType2.innerText;
 
-
         const properties = {
             description: description,
             ellunesempiezo: ellunesempiezo ? true : false,
-            author: author ? "Fabian León" : null,
+            author: author ? 'Fabian León' : null,
             despilfarro: despilfarro ? true : false,
             gourmet: gourmet ? true : false,
             bio: bio ? true : false,
@@ -122,12 +119,12 @@ async function getInformation(page) {
             lactosa: lactosa ? true : false,
             vegano: vegano ? true : false,
             vegetariano: vegetariano ? true : false,
-            difficulty: difficulty ? difficulty.parentElement.querySelector("p").innerText : null,
-            recipeCategory: recipeCategory ? recipeCategory.parentElement.querySelector("p").innerText : null,
-            recipeYield: recipeYield ? recipeYield.parentElement.querySelector("p").innerText : null,
-            calories: calories ? calories.parentElement.querySelector("p").innerText : null,
-            cookTime: cookTime ? cookTime.parentElement.querySelector("p").innerText : null,
-        }
+            difficulty: difficulty ? difficulty.parentElement.querySelector('p').innerText : null,
+            recipeCategory: recipeCategory ? recipeCategory.parentElement.querySelector('p').innerText : null,
+            recipeYield: recipeYield ? recipeYield.parentElement.querySelector('p').innerText : null,
+            calories: calories ? calories.parentElement.querySelector('p').innerText : null,
+            cookTime: cookTime ? cookTime.parentElement.querySelector('p').innerText : null
+        };
 
         return properties;
     });
@@ -146,7 +143,6 @@ async function getIngredients(page) {
     return ingredients;
 }
 
-
 async function getPreparation(page) {
     const preparation = await page.$$eval('.receip-steps > div.step', steps => {
         return steps.map(step => {
@@ -161,7 +157,6 @@ async function getPreparation(page) {
 async function getNecessaryProducts(page) {
     const necessaryProducts = await page.$$eval('article.product-card-item:not(:last-child)', listCard => {
         return listCard.map(cardElement => {
-            
             const trimRepleace = function (string) {
                 return string.replace(/(\r\n|\n|\r)/gm, '').trim();
             };
@@ -169,11 +164,10 @@ async function getNecessaryProducts(page) {
             let price = 0;
             let offer_type = cardElement.querySelector('.bg-promocion-copy p.promocion-copy');
 
-            const img = cardElement.querySelector("div.right-side > div.photo > a > img").src;
-            const name = cardElement.querySelector("div.text > div.brand > a > p.title-product").innerText;
+            const img = cardElement.querySelector('div.right-side > div.photo > a > img').src;
+            const name = cardElement.querySelector('div.text > div.brand > a > p.title-product').innerText;
             const pricesContainer = cardElement.querySelector('.price-container');
             let stock = cardElement.querySelector('div.container-anadir > div.container-anadirBTN > button.anadirBTN');
-
 
             if (stock != null) {
                 stock = true;
@@ -203,3 +197,7 @@ async function getNecessaryProducts(page) {
 
     return necessaryProducts;
 }
+
+module.exports = {
+    executeRecipes: executeRecipes
+};

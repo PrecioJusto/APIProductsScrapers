@@ -137,7 +137,7 @@ function getContainer(product) {
     });
 
     if (result) return result;
-    return {};
+    return null;
 }
 
 function getOffer(product) {
@@ -146,10 +146,11 @@ function getOffer(product) {
     } else if (product.offer_price) {
         return {
             offer_type: 'offerpercentage',
-            ofpepreviousprice: formatPrice(product.price),
-            ofpepercentage: (formatPrice(product.price) / formatPrice(product.offer_price)) * 100 - 100
+            ofpepreviousprice: parseInt(formatPrice(product.price)),
+            ofpepercentage: parseFloat((formatPrice(product.price) / formatPrice(product.offer_price)) * 100 - 100)
         };
     }
+    return null;
 }
 
 function offerMatcher(offer_type, supermarket) {
@@ -158,14 +159,14 @@ function offerMatcher(offer_type, supermarket) {
         if (offer_type.includes('ª al -')) {
             return {
                 offer_type: 'offerunitpercentage',
-                ofupunitaffected: offer_type.charAt(0),
-                ofuppercentage: offer_type.substring(offer_type.length - 3, offer_type.length)
+                ofupunitaffected: parseInt(offer_type.charAt(0)),
+                ofuppercentage: parseFloat(offer_type.substring(offer_type.length - 3, offer_type.length))
             };
         } else if (offer_type.charAt(1) === 'x' && offer_type.length == 3) {
             return {
                 offer_type: 'offerunit',
-                ofunfirst: offer_type.charAt(0),
-                ofunsecond: offer_type.charAt(2)
+                ofunfirst: parseInt(offer_type.charAt(0)),
+                ofunsecond: parseInt(offer_type.charAt(2))
             };
         }
     }
@@ -173,20 +174,20 @@ function offerMatcher(offer_type, supermarket) {
         if (offer_type.includes('ª unidad al')) {
             return {
                 offer_type: 'offerunitpercentage',
-                ofupunitaffected: offer_type.charAt(0),
-                ofuppercentage: offer_type.substring(13, 15)
+                ofupunitaffected: parseInt(offer_type.charAt(0)),
+                ofuppercentage: parseFloat(offer_type.substring(13, 15))
             };
         } else if (offer_type.includes('Lleva ') && offer_type.includes(' y paga ')) {
             return {
                 offer_type: 'offerunit',
-                ofunfirst: offer_type.charAt(6),
-                ofunsecond: offer_type.charAt(offer_type.length - 1)
+                ofunfirst: parseInt(offer_type.charAt(6)),
+                ofunsecond: parseInt(offer_type.charAt(offer_type.length - 1))
             };
         } else if (offer_type.includes('Lleva ') && offer_type.includes(' unidades por ')) {
             return {
                 offer_type: 'offerunitplainprice',
-                ofupunits: offer_type.charAt(6),
-                ofupprice: formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, ''))
+                ofupunits: parseInt(offer_type.charAt(6)),
+                ofupprice: parseInt(formatPrice(offer_type.substring(21, offer_type.length).replace(/\s/g, '')))
             };
         }
     }
