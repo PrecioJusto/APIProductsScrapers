@@ -28,7 +28,7 @@ const getAllFiles = (dirPath, arrayOfFiles) => {
     return arrayOfFiles;
 };
 
-productDecorator();
+//productDecorator();
 
 function readFiles(filePath) {
     return new Promise(resolve => {
@@ -38,7 +38,7 @@ function readFiles(filePath) {
 
 function generateThreads(prod, fileString) {
     if(!prod) return;
-    // if(extractor.getCategory(fileString) !== 'arroz_y_cous_cous') return;
+    //if(extractor.getCategory(fileString) !== 'arroz_y_cous_cous') return;
     return new Promise(resolve => {
         return resolve({
             name: prod.name,

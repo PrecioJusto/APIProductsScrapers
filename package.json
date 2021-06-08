@@ -9,9 +9,7 @@
   "author": "Daniel Carrillo, Samuel Romero, Tolo Castañer",
   "license": "ISC",
   "dependencies": {
-    "@discoveryjs/json-ext": "^0.5.2",
     "axios": "^0.21.1",
-    "brain.js": "^2.0.0-beta.2",
     "object-sizeof": "^1.6.1",
     "puppeteer": "^8.0.0",
     "puppeteer-extra": "^3.1.18",

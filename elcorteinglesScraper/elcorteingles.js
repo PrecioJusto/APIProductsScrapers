@@ -4,7 +4,7 @@ puppeteer.use(StealthPlugin());
 const fs = require('fs');
 const urls = require('./eciProducts.json');
 
-(async () => {
+async function executeEci() {
     for (let category in urls) {
         const browser = await puppeteer.launch({
             headless: true
@@ -56,7 +56,7 @@ const urls = require('./eciProducts.json');
         await page.close();
         await browser.close();
     }
-})();
+}
 
 async function getProducts(page) {
     const elements = await page.evaluate(() =>
@@ -72,7 +72,7 @@ async function getProducts(page) {
                 const offer_type =
                     elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description') != null
                         ? elem.querySelector('.product_tile-description_holder .product_tile-offers_desktop_holder .offer-description')
-                            .innerText
+                              .innerText
                         : false;
                 const stock =
                     elem.querySelector(
@@ -101,3 +101,7 @@ async function getProducts(page) {
     );
     return elements;
 }
+
+module.exports = {
+    executeEci: executeEci
+};

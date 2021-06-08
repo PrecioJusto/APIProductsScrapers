@@ -6,8 +6,8 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
 
-(async () => {
 
+async function executeAlcampo() {
     const browser = await puppeteer.launch({
         headless: true
     });
@@ -34,7 +34,7 @@ puppeteer.use(StealthPlugin());
         await page.close();
     }
     await browser.close();
-})();
+}
 
 async function getEachProductFromPage(page) {
 
@@ -89,3 +89,7 @@ async function getAllFromPage(page) {
     });
     return product;
 }
+
+module.exports = {
+    executeAlcampo: executeAlcampo
+};
