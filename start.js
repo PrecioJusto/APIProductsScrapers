@@ -7,7 +7,7 @@ const productDecorator = require('./service/decorators/productDecorator');
 const request = require('./controller/request');
 //
 
-T//his script can take a total of 10 hours to fully run.
+//This script can take a total of 10 hours to fully run.
 (async () => {
     const al = alcampo.executeAlcampo();
     const el = elcorteingles.executeEci();
