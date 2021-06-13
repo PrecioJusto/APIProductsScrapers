@@ -4,7 +4,7 @@ puppeteer.use(StealthPlugin());
 const fs = require('fs');
 const urls = require('./hipercorProducts.json');
 
-(async () => {
+async function executeHipercor() {
     for (let category in urls) {
         const browser = await puppeteer.launch({
             headless: true
@@ -56,7 +56,7 @@ const urls = require('./hipercorProducts.json');
         await page.close();
         await browser.close();
     }
-})();
+}
 
 async function getProducts(page) {
     const elements = await page.evaluate(() =>
@@ -85,7 +85,7 @@ async function getProducts(page) {
                     offer_price: offer_price,
                     offer_type: offer_type,
                     stock: stock, // pending change on fix.
-                    supermarket: 'elcorteingles'
+                    supermarket: 'hipercor'
                 };
             }
 
@@ -96,3 +96,7 @@ async function getProducts(page) {
     );
     return elements;
 }
+
+module.exports = {
+    executeHipercor: executeHipercor
+};

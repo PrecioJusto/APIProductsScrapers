@@ -9,6 +9,8 @@
   "author": "Daniel Carrillo, Samuel Romero, Tolo Castañer",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "object-sizeof": "^1.6.1",
     "puppeteer": "^8.0.0",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-stealth": "^2.7.6"
