@@ -1,14 +1,14 @@
 const axios = require('axios');
 
 const urlProd = 'http://APIProductsJava:5000';
-const urlDev = "http://localhost:5000";
+const urlDev = "http://localhost:4000";
 
 console.log('Executing request');
 async function sendProductData(data) {
     console.log('Executing send product data');
     axios({
         method: 'POST',
-        url: `${urlProd}/extractor/product`,
+        url: `${urlProd}/api/extractor/product`,
         data: JSON.stringify(data),
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         maxContentLength: Infinity,
